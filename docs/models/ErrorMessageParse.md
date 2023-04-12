@@ -3,7 +3,7 @@
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **error_code** | [**Int**](Int.md) |  | [optional]  |
+| **error_code** | **str** |  | [optional]  |
 | **message** | **str** |  | [optional]  |
 
 

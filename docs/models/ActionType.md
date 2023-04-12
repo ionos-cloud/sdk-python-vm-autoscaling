@@ -1,6 +1,6 @@
 # ActionType
 
-The different types of scaling actions. A `SCALE_IN` action will delete servers until the group has at most `targetReplicaCount` servers. Contrarily, a `SCALE_OUT` action will create servers until the group has at least `targetReplicaCount` servers.
+The type of scaling action. A 'SCALE_IN' action deletes servers until the group has at most the number of servers defined with 'targetReplicaCount'. A 'SCALE_OUT' action creates servers until the group has at least the servers defined with 'targetReplicaCount'.
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |

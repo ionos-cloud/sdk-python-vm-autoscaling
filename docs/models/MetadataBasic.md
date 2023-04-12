@@ -1,12 +1,12 @@
 # MetadataBasic
 
-Metadata about the resource
+The resource metadata.
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **created_date** | **datetime** | When the resource was created. |  |
-| **etag** | **str** | Resource etag |  |
-| **last_modified_date** | **datetime** | When the resource was last modified. |  |
-| **state** | [**MetadataState**](MetadataState.md) |  |  |
+| **created_date** | **datetime** | The date the resource was created. |  |
+| **etag** | **str** | The resource etag. |  |
+| **last_modified_date** | **datetime** | The date the resource was last modified. |  |
+| **state** | **str** | The resource state. |  |
 
 

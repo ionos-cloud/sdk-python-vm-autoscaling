@@ -17,21 +17,21 @@ class GroupsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def autoscaling_groups_actions_find_by_id(self, action_id, group_id, **kwargs):  # noqa: E501
-        """Retrieve action details  # noqa: E501
+    def groups_actions_find_by_id(self, action_id, group_id, **kwargs):  # noqa: E501
+        """Get Scaling Action Details by ID  # noqa: E501
 
-        Retrieve the details, such as metadata, properties, and the current status, for the specified action.  # noqa: E501
+        Retrieves the details of a scaling action specified by its ID. This operation returns metadata, properties, and the current status, for the specified scaling action  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.autoscaling_groups_actions_find_by_id(action_id, group_id, async_req=True)
+        >>> thread = api.groups_actions_find_by_id(action_id, group_id, async_req=True)
         >>> result = thread.get()
 
         :param action_id: (required)
         :type action_id: str
         :param group_id: (required)
         :type group_id: str
-        :param depth: Controls the detail depth of the response objects.    - depth=0: Only direct properties are included; children (such as executions or transitions) are not included.    - depth=1: Direct properties and children references are included.    - depth=2: Direct properties and children properties are included.    - depth=3: Direct properties and children properties and children's children are included.    - depth=... and so on  
+        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -49,23 +49,23 @@ class GroupsApi(object):
         :rtype: Action
         """
         kwargs['_return_http_data_only'] = True
-        return self.autoscaling_groups_actions_find_by_id_with_http_info(action_id, group_id, **kwargs)  # noqa: E501
+        return self.groups_actions_find_by_id_with_http_info(action_id, group_id, **kwargs)  # noqa: E501
 
-    def autoscaling_groups_actions_find_by_id_with_http_info(self, action_id, group_id, **kwargs):  # noqa: E501
-        """Retrieve action details  # noqa: E501
+    def groups_actions_find_by_id_with_http_info(self, action_id, group_id, **kwargs):  # noqa: E501
+        """Get Scaling Action Details by ID  # noqa: E501
 
-        Retrieve the details, such as metadata, properties, and the current status, for the specified action.  # noqa: E501
+        Retrieves the details of a scaling action specified by its ID. This operation returns metadata, properties, and the current status, for the specified scaling action  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.autoscaling_groups_actions_find_by_id_with_http_info(action_id, group_id, async_req=True)
+        >>> thread = api.groups_actions_find_by_id_with_http_info(action_id, group_id, async_req=True)
         >>> result = thread.get()
 
         :param action_id: (required)
         :type action_id: str
         :param group_id: (required)
         :type group_id: str
-        :param depth: Controls the detail depth of the response objects.    - depth=0: Only direct properties are included; children (such as executions or transitions) are not included.    - depth=1: Direct properties and children references are included.    - depth=2: Direct properties and children properties are included.    - depth=3: Direct properties and children properties and children's children are included.    - depth=... and so on  
+        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -113,18 +113,18 @@ class GroupsApi(object):
             if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method autoscaling_groups_actions_find_by_id" % local_var_params_key
+                    " to method groups_actions_find_by_id" % local_var_params_key
                 )
             local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'action_id' is set
         if self.api_client.client_side_validation and ('action_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['action_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `action_id` when calling `autoscaling_groups_actions_find_by_id`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `action_id` when calling `groups_actions_find_by_id`")  # noqa: E501
         # verify the required parameter 'group_id' is set
         if self.api_client.client_side_validation and ('group_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['group_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `group_id` when calling `autoscaling_groups_actions_find_by_id`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `group_id` when calling `groups_actions_find_by_id`")  # noqa: E501
 
         collection_formats = {}
 
@@ -156,7 +156,7 @@ class GroupsApi(object):
             response_type = kwargs['response_type']
 
         return self.api_client.call_api(
-            '/cloudapi/autoscaling/groups/{groupId}/actions/{actionId}', 'GET',
+            '/groups/{groupId}/actions/{actionId}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -172,21 +172,21 @@ class GroupsApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def autoscaling_groups_actions_get(self, group_id, **kwargs):  # noqa: E501
-        """Retrieve last ten actions  # noqa: E501
+    def groups_actions_get(self, group_id, **kwargs):  # noqa: E501
+        """Get Scaling Actions  # noqa: E501
 
-        Retrieve the scaling actions for the specified autoscaling group; presently, only the last ten actions are returned.  # noqa: E501
+        Retrieves the list of the scaling actions for the Auto Scaling group specified by its ID.    >Note that currently, only the last ten actions are returned.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.autoscaling_groups_actions_get(group_id, async_req=True)
+        >>> thread = api.groups_actions_get(group_id, async_req=True)
         >>> result = thread.get()
 
         :param group_id: (required)
         :type group_id: str
-        :param depth: Controls the detail depth of the response objects.    - depth=0: Only direct properties are included; children (such as executions or transitions) are not included.    - depth=1: Direct properties and children references are included.    - depth=2: Direct properties and children properties are included.    - depth=3: Direct properties and children properties and children's children are included.    - depth=... and so on  
+        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
-        :param order_by: Define the property to be used for ordering the returned list; valid values are 'createdDate' and 'lastModifiedDate'.
+        :param order_by: Use this parameter to specify by which the returned list should be sorted. Valid values are: ``createdDate`` and ``lastModifiedDate``.
         :type order_by: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -204,23 +204,23 @@ class GroupsApi(object):
         :rtype: ActionCollection
         """
         kwargs['_return_http_data_only'] = True
-        return self.autoscaling_groups_actions_get_with_http_info(group_id, **kwargs)  # noqa: E501
+        return self.groups_actions_get_with_http_info(group_id, **kwargs)  # noqa: E501
 
-    def autoscaling_groups_actions_get_with_http_info(self, group_id, **kwargs):  # noqa: E501
-        """Retrieve last ten actions  # noqa: E501
+    def groups_actions_get_with_http_info(self, group_id, **kwargs):  # noqa: E501
+        """Get Scaling Actions  # noqa: E501
 
-        Retrieve the scaling actions for the specified autoscaling group; presently, only the last ten actions are returned.  # noqa: E501
+        Retrieves the list of the scaling actions for the Auto Scaling group specified by its ID.    >Note that currently, only the last ten actions are returned.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.autoscaling_groups_actions_get_with_http_info(group_id, async_req=True)
+        >>> thread = api.groups_actions_get_with_http_info(group_id, async_req=True)
         >>> result = thread.get()
 
         :param group_id: (required)
         :type group_id: str
-        :param depth: Controls the detail depth of the response objects.    - depth=0: Only direct properties are included; children (such as executions or transitions) are not included.    - depth=1: Direct properties and children references are included.    - depth=2: Direct properties and children properties are included.    - depth=3: Direct properties and children properties and children's children are included.    - depth=... and so on  
+        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
-        :param order_by: Define the property to be used for ordering the returned list; valid values are 'createdDate' and 'lastModifiedDate'.
+        :param order_by: Use this parameter to specify by which the returned list should be sorted. Valid values are: ``createdDate`` and ``lastModifiedDate``.
         :type order_by: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -268,14 +268,14 @@ class GroupsApi(object):
             if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method autoscaling_groups_actions_get" % local_var_params_key
+                    " to method groups_actions_get" % local_var_params_key
                 )
             local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'group_id' is set
         if self.api_client.client_side_validation and ('group_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['group_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `group_id` when calling `autoscaling_groups_actions_get`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `group_id` when calling `groups_actions_get`")  # noqa: E501
 
         collection_formats = {}
 
@@ -307,7 +307,7 @@ class GroupsApi(object):
             response_type = kwargs['response_type']
 
         return self.api_client.call_api(
-            '/cloudapi/autoscaling/groups/{groupId}/actions', 'GET',
+            '/groups/{groupId}/actions', 'GET',
             path_params,
             query_params,
             header_params,
@@ -323,14 +323,14 @@ class GroupsApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def autoscaling_groups_delete(self, group_id, **kwargs):  # noqa: E501
-        """Delete autoscaling groups.  # noqa: E501
+    def groups_delete(self, group_id, **kwargs):  # noqa: E501
+        """Delete an Auto Scaling Group by ID  # noqa: E501
 
-        Delete the specified autoscaling group; deletion of the associated servers and volumes is presently not implemented.  # noqa: E501
+        Deletes the Auto Scaling group specified by its ID.  >Deleting the associated servers and disks is currently not implemented.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.autoscaling_groups_delete(group_id, async_req=True)
+        >>> thread = api.groups_delete(group_id, async_req=True)
         >>> result = thread.get()
 
         :param group_id: (required)
@@ -351,16 +351,16 @@ class GroupsApi(object):
         :rtype: None
         """
         kwargs['_return_http_data_only'] = True
-        return self.autoscaling_groups_delete_with_http_info(group_id, **kwargs)  # noqa: E501
+        return self.groups_delete_with_http_info(group_id, **kwargs)  # noqa: E501
 
-    def autoscaling_groups_delete_with_http_info(self, group_id, **kwargs):  # noqa: E501
-        """Delete autoscaling groups.  # noqa: E501
+    def groups_delete_with_http_info(self, group_id, **kwargs):  # noqa: E501
+        """Delete an Auto Scaling Group by ID  # noqa: E501
 
-        Delete the specified autoscaling group; deletion of the associated servers and volumes is presently not implemented.  # noqa: E501
+        Deletes the Auto Scaling group specified by its ID.  >Deleting the associated servers and disks is currently not implemented.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.autoscaling_groups_delete_with_http_info(group_id, async_req=True)
+        >>> thread = api.groups_delete_with_http_info(group_id, async_req=True)
         >>> result = thread.get()
 
         :param group_id: (required)
@@ -409,14 +409,14 @@ class GroupsApi(object):
             if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method autoscaling_groups_delete" % local_var_params_key
+                    " to method groups_delete" % local_var_params_key
                 )
             local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'group_id' is set
         if self.api_client.client_side_validation and ('group_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['group_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `group_id` when calling `autoscaling_groups_delete`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `group_id` when calling `groups_delete`")  # noqa: E501
 
         collection_formats = {}
 
@@ -444,7 +444,7 @@ class GroupsApi(object):
             response_type = kwargs['response_type']
 
         return self.api_client.call_api(
-            '/cloudapi/autoscaling/groups/{groupId}', 'DELETE',
+            '/groups/{groupId}', 'DELETE',
             path_params,
             query_params,
             header_params,
@@ -460,19 +460,19 @@ class GroupsApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def autoscaling_groups_find_by_id(self, group_id, **kwargs):  # noqa: E501
-        """Retrieve autoscaling groups by UUID  # noqa: E501
+    def groups_find_by_id(self, group_id, **kwargs):  # noqa: E501
+        """Get an Auto Scaling by ID  # noqa: E501
 
-        Retrieve the details for the autoscaling group with the specified UUID.  # noqa: E501
+        Retrieves the Auto Scaling group specified by its ID including the details.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.autoscaling_groups_find_by_id(group_id, async_req=True)
+        >>> thread = api.groups_find_by_id(group_id, async_req=True)
         >>> result = thread.get()
 
         :param group_id: (required)
         :type group_id: str
-        :param depth: Controls the detail depth of the response objects.    - depth=0: Only direct properties are included; children (such as executions or transitions) are not included.    - depth=1: Direct properties and children references are included.    - depth=2: Direct properties and children properties are included.    - depth=3: Direct properties and children properties and children's children are included.    - depth=... and so on  
+        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -490,21 +490,21 @@ class GroupsApi(object):
         :rtype: Group
         """
         kwargs['_return_http_data_only'] = True
-        return self.autoscaling_groups_find_by_id_with_http_info(group_id, **kwargs)  # noqa: E501
+        return self.groups_find_by_id_with_http_info(group_id, **kwargs)  # noqa: E501
 
-    def autoscaling_groups_find_by_id_with_http_info(self, group_id, **kwargs):  # noqa: E501
-        """Retrieve autoscaling groups by UUID  # noqa: E501
+    def groups_find_by_id_with_http_info(self, group_id, **kwargs):  # noqa: E501
+        """Get an Auto Scaling by ID  # noqa: E501
 
-        Retrieve the details for the autoscaling group with the specified UUID.  # noqa: E501
+        Retrieves the Auto Scaling group specified by its ID including the details.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.autoscaling_groups_find_by_id_with_http_info(group_id, async_req=True)
+        >>> thread = api.groups_find_by_id_with_http_info(group_id, async_req=True)
         >>> result = thread.get()
 
         :param group_id: (required)
         :type group_id: str
-        :param depth: Controls the detail depth of the response objects.    - depth=0: Only direct properties are included; children (such as executions or transitions) are not included.    - depth=1: Direct properties and children references are included.    - depth=2: Direct properties and children properties are included.    - depth=3: Direct properties and children properties and children's children are included.    - depth=... and so on  
+        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -551,14 +551,14 @@ class GroupsApi(object):
             if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method autoscaling_groups_find_by_id" % local_var_params_key
+                    " to method groups_find_by_id" % local_var_params_key
                 )
             local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'group_id' is set
         if self.api_client.client_side_validation and ('group_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['group_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `group_id` when calling `autoscaling_groups_find_by_id`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `group_id` when calling `groups_find_by_id`")  # noqa: E501
 
         collection_formats = {}
 
@@ -588,7 +588,7 @@ class GroupsApi(object):
             response_type = kwargs['response_type']
 
         return self.api_client.call_api(
-            '/cloudapi/autoscaling/groups/{groupId}', 'GET',
+            '/groups/{groupId}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -604,19 +604,19 @@ class GroupsApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def autoscaling_groups_get(self, **kwargs):  # noqa: E501
-        """List autoscaling groups  # noqa: E501
+    def groups_get(self, **kwargs):  # noqa: E501
+        """Get Auto Scaling Groups  # noqa: E501
 
-        List all autoscaling groups for your account.  # noqa: E501
+        Lists all Auto Scaling groups of your account.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.autoscaling_groups_get(async_req=True)
+        >>> thread = api.groups_get(async_req=True)
         >>> result = thread.get()
 
-        :param depth: Controls the detail depth of the response objects.    - depth=0: Only direct properties are included; children (such as executions or transitions) are not included.    - depth=1: Direct properties and children references are included.    - depth=2: Direct properties and children properties are included.    - depth=3: Direct properties and children properties and children's children are included.    - depth=... and so on  
+        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
-        :param order_by: Define the property to be used for ordering the returned list; valid values are 'createdDate' and 'lastModifiedDate'.
+        :param order_by: Use this parameter to specify by which the returned list should be sorted. Valid values are: ``createdDate`` and ``lastModifiedDate``.
         :type order_by: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -634,21 +634,21 @@ class GroupsApi(object):
         :rtype: GroupCollection
         """
         kwargs['_return_http_data_only'] = True
-        return self.autoscaling_groups_get_with_http_info(**kwargs)  # noqa: E501
+        return self.groups_get_with_http_info(**kwargs)  # noqa: E501
 
-    def autoscaling_groups_get_with_http_info(self, **kwargs):  # noqa: E501
-        """List autoscaling groups  # noqa: E501
+    def groups_get_with_http_info(self, **kwargs):  # noqa: E501
+        """Get Auto Scaling Groups  # noqa: E501
 
-        List all autoscaling groups for your account.  # noqa: E501
+        Lists all Auto Scaling groups of your account.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.autoscaling_groups_get_with_http_info(async_req=True)
+        >>> thread = api.groups_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param depth: Controls the detail depth of the response objects.    - depth=0: Only direct properties are included; children (such as executions or transitions) are not included.    - depth=1: Direct properties and children references are included.    - depth=2: Direct properties and children properties are included.    - depth=3: Direct properties and children properties and children's children are included.    - depth=... and so on  
+        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
-        :param order_by: Define the property to be used for ordering the returned list; valid values are 'createdDate' and 'lastModifiedDate'.
+        :param order_by: Use this parameter to specify by which the returned list should be sorted. Valid values are: ``createdDate`` and ``lastModifiedDate``.
         :type order_by: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -695,7 +695,7 @@ class GroupsApi(object):
             if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method autoscaling_groups_get" % local_var_params_key
+                    " to method groups_get" % local_var_params_key
                 )
             local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
@@ -728,7 +728,7 @@ class GroupsApi(object):
             response_type = kwargs['response_type']
 
         return self.api_client.call_api(
-            '/cloudapi/autoscaling/groups', 'GET',
+            '/groups', 'GET',
             path_params,
             query_params,
             header_params,
@@ -744,18 +744,18 @@ class GroupsApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def autoscaling_groups_post(self, group, **kwargs):  # noqa: E501
-        """Create autoscaling groups  # noqa: E501
+    def groups_post(self, group_post, **kwargs):  # noqa: E501
+        """Create an Auto Scaling Group  # noqa: E501
 
-        Create autoscaling groups with this POST method. Creation of a group will trigger the creation of two monitoring alarms, for ‘Scale In’ and ‘Scale Out’ operations, according to \"policy\" settings.   \"properties.name\" must not be null or blank.   \"properties.targetReplicaCount\" is optional attribute which must be >= minReplicaCount and <= maxReplicaCount if provided in the request body.   \"properties.minReplicaCount\" must be >= 0 and <= 200.   \"properties.maxReplicaCount\" must be >= 0 and <= 200.   \"properties.datacenter.id\" must be a valid data center ID.   \"properties.policy.metric\" must be one of: INSTANCE_CPU_UTILIZATION_AVERAGE, INSTANCE_NETWORK_IN_BYTES, INSTANCE_NETWORK_OUT_BYTES, INSTANCE_NETWORK_IN_PACKETS, INSTANCE_NETWORK_OUT_PACKETS.   \"properties.policy.unit\" must be one of:  PER_SECOND, PER_MINUTE, PER_HOUR, TOTAL.  TOTAL can be combined only with INSTANCE_CPU_UTILIZATION_AVERAGE.   \"properties.policy.range\" must be >= 2 minutes.   If \"properties.policy.unit\" is \"TOTAL\", then \"properties.policy.scaleOutThreshold - properties.policy.scaleInThreshold\" must be >= 40.    \"properties.policy.scaleInAction.amount\" (the same is true for \"properties.policy.scaleOutAction.amount\") must be:   in case of properties.policy.scaleInAction.amountType = ABSOLUTE: 1 <= properties.policy.scaleInAction.amount <= 10  in case of properties.policy.scaleInAction.amountType = PERCENTAGE: 1 <= properties.policy.scaleInAction.amount <= 200   \"properties.policy.scaleInAction.cooldownPeriod\" (the same is true for \"properties.policy.scaleOutAction.cooldownPeriod\") must be: >= 2 minutes and <= 24 hours with a default value of 5 minutes if not provided in the request payload or given with null, empty string or spaces.  # noqa: E501
+        Creates an Auto Scaling group.   > Note that creating a group triggers the creation of two monitoring alarms for 'Scale-In' and 'Scale-Out' operations according to the 'Policy' settings.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.autoscaling_groups_post(group, async_req=True)
+        >>> thread = api.groups_post(group_post, async_req=True)
         >>> result = thread.get()
 
-        :param group: (required)
-        :type group: Group
+        :param group_post: (required)
+        :type group_post: GroupPost
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -772,20 +772,20 @@ class GroupsApi(object):
         :rtype: GroupPostResponse
         """
         kwargs['_return_http_data_only'] = True
-        return self.autoscaling_groups_post_with_http_info(group, **kwargs)  # noqa: E501
+        return self.groups_post_with_http_info(group_post, **kwargs)  # noqa: E501
 
-    def autoscaling_groups_post_with_http_info(self, group, **kwargs):  # noqa: E501
-        """Create autoscaling groups  # noqa: E501
+    def groups_post_with_http_info(self, group_post, **kwargs):  # noqa: E501
+        """Create an Auto Scaling Group  # noqa: E501
 
-        Create autoscaling groups with this POST method. Creation of a group will trigger the creation of two monitoring alarms, for ‘Scale In’ and ‘Scale Out’ operations, according to \"policy\" settings.   \"properties.name\" must not be null or blank.   \"properties.targetReplicaCount\" is optional attribute which must be >= minReplicaCount and <= maxReplicaCount if provided in the request body.   \"properties.minReplicaCount\" must be >= 0 and <= 200.   \"properties.maxReplicaCount\" must be >= 0 and <= 200.   \"properties.datacenter.id\" must be a valid data center ID.   \"properties.policy.metric\" must be one of: INSTANCE_CPU_UTILIZATION_AVERAGE, INSTANCE_NETWORK_IN_BYTES, INSTANCE_NETWORK_OUT_BYTES, INSTANCE_NETWORK_IN_PACKETS, INSTANCE_NETWORK_OUT_PACKETS.   \"properties.policy.unit\" must be one of:  PER_SECOND, PER_MINUTE, PER_HOUR, TOTAL.  TOTAL can be combined only with INSTANCE_CPU_UTILIZATION_AVERAGE.   \"properties.policy.range\" must be >= 2 minutes.   If \"properties.policy.unit\" is \"TOTAL\", then \"properties.policy.scaleOutThreshold - properties.policy.scaleInThreshold\" must be >= 40.    \"properties.policy.scaleInAction.amount\" (the same is true for \"properties.policy.scaleOutAction.amount\") must be:   in case of properties.policy.scaleInAction.amountType = ABSOLUTE: 1 <= properties.policy.scaleInAction.amount <= 10  in case of properties.policy.scaleInAction.amountType = PERCENTAGE: 1 <= properties.policy.scaleInAction.amount <= 200   \"properties.policy.scaleInAction.cooldownPeriod\" (the same is true for \"properties.policy.scaleOutAction.cooldownPeriod\") must be: >= 2 minutes and <= 24 hours with a default value of 5 minutes if not provided in the request payload or given with null, empty string or spaces.  # noqa: E501
+        Creates an Auto Scaling group.   > Note that creating a group triggers the creation of two monitoring alarms for 'Scale-In' and 'Scale-Out' operations according to the 'Policy' settings.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.autoscaling_groups_post_with_http_info(group, async_req=True)
+        >>> thread = api.groups_post_with_http_info(group_post, async_req=True)
         >>> result = thread.get()
 
-        :param group: (required)
-        :type group: Group
+        :param group_post: (required)
+        :type group_post: GroupPost
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -812,7 +812,7 @@ class GroupsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'group'
+            'group_post'
         ]
         all_params.extend(
             [
@@ -830,14 +830,14 @@ class GroupsApi(object):
             if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method autoscaling_groups_post" % local_var_params_key
+                    " to method groups_post" % local_var_params_key
                 )
             local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
-        # verify the required parameter 'group' is set
-        if self.api_client.client_side_validation and ('group' not in local_var_params or  # noqa: E501
-                                                        local_var_params['group'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `group` when calling `autoscaling_groups_post`")  # noqa: E501
+        # verify the required parameter 'group_post' is set
+        if self.api_client.client_side_validation and ('group_post' not in local_var_params or  # noqa: E501
+                                                        local_var_params['group_post'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `group_post` when calling `groups_post`")  # noqa: E501
 
         collection_formats = {}
 
@@ -851,8 +851,8 @@ class GroupsApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'group' in local_var_params:
-            body_params = local_var_params['group']
+        if 'group_post' in local_var_params:
+            body_params = local_var_params['group_post']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
@@ -869,7 +869,7 @@ class GroupsApi(object):
             response_type = kwargs['response_type']
 
         return self.api_client.call_api(
-            '/cloudapi/autoscaling/groups', 'POST',
+            '/groups', 'POST',
             path_params,
             query_params,
             header_params,
@@ -885,20 +885,20 @@ class GroupsApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def autoscaling_groups_put(self, group_id, group_update, **kwargs):  # noqa: E501
-        """Update autoscaling groups  # noqa: E501
+    def groups_put(self, group_id, group_put, **kwargs):  # noqa: E501
+        """Update an Auto Scaling Group by ID  # noqa: E501
 
-        Update the specified autoscaling group. \"properties.datacenter.id\" is immutable after creation and cannot be updated.  The other validations are the same as when creating a group.  # noqa: E501
+        Updates the Auto Scaling group specified by its ID. The IDs assigned by the system when the resource is created, such as 'properties.datacenter.id' and 'backupunitId', are immutable and cannot be updated.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.autoscaling_groups_put(group_id, group_update, async_req=True)
+        >>> thread = api.groups_put(group_id, group_put, async_req=True)
         >>> result = thread.get()
 
         :param group_id: (required)
         :type group_id: str
-        :param group_update: (required)
-        :type group_update: GroupUpdate
+        :param group_put: (required)
+        :type group_put: GroupPut
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -915,22 +915,22 @@ class GroupsApi(object):
         :rtype: Group
         """
         kwargs['_return_http_data_only'] = True
-        return self.autoscaling_groups_put_with_http_info(group_id, group_update, **kwargs)  # noqa: E501
+        return self.groups_put_with_http_info(group_id, group_put, **kwargs)  # noqa: E501
 
-    def autoscaling_groups_put_with_http_info(self, group_id, group_update, **kwargs):  # noqa: E501
-        """Update autoscaling groups  # noqa: E501
+    def groups_put_with_http_info(self, group_id, group_put, **kwargs):  # noqa: E501
+        """Update an Auto Scaling Group by ID  # noqa: E501
 
-        Update the specified autoscaling group. \"properties.datacenter.id\" is immutable after creation and cannot be updated.  The other validations are the same as when creating a group.  # noqa: E501
+        Updates the Auto Scaling group specified by its ID. The IDs assigned by the system when the resource is created, such as 'properties.datacenter.id' and 'backupunitId', are immutable and cannot be updated.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.autoscaling_groups_put_with_http_info(group_id, group_update, async_req=True)
+        >>> thread = api.groups_put_with_http_info(group_id, group_put, async_req=True)
         >>> result = thread.get()
 
         :param group_id: (required)
         :type group_id: str
-        :param group_update: (required)
-        :type group_update: GroupUpdate
+        :param group_put: (required)
+        :type group_put: GroupPut
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -958,7 +958,7 @@ class GroupsApi(object):
 
         all_params = [
             'group_id',
-            'group_update'
+            'group_put'
         ]
         all_params.extend(
             [
@@ -976,18 +976,18 @@ class GroupsApi(object):
             if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method autoscaling_groups_put" % local_var_params_key
+                    " to method groups_put" % local_var_params_key
                 )
             local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'group_id' is set
         if self.api_client.client_side_validation and ('group_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['group_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `group_id` when calling `autoscaling_groups_put`")  # noqa: E501
-        # verify the required parameter 'group_update' is set
-        if self.api_client.client_side_validation and ('group_update' not in local_var_params or  # noqa: E501
-                                                        local_var_params['group_update'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `group_update` when calling `autoscaling_groups_put`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `group_id` when calling `groups_put`")  # noqa: E501
+        # verify the required parameter 'group_put' is set
+        if self.api_client.client_side_validation and ('group_put' not in local_var_params or  # noqa: E501
+                                                        local_var_params['group_put'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `group_put` when calling `groups_put`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1003,8 +1003,8 @@ class GroupsApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'group_update' in local_var_params:
-            body_params = local_var_params['group_update']
+        if 'group_put' in local_var_params:
+            body_params = local_var_params['group_put']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
@@ -1021,7 +1021,7 @@ class GroupsApi(object):
             response_type = kwargs['response_type']
 
         return self.api_client.call_api(
-            '/cloudapi/autoscaling/groups/{groupId}', 'PUT',
+            '/groups/{groupId}', 'PUT',
             path_params,
             query_params,
             header_params,
@@ -1037,21 +1037,21 @@ class GroupsApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def autoscaling_groups_servers_find_by_id(self, group_id, server_id, **kwargs):  # noqa: E501
-        """Retrieve group servers by UUID  # noqa: E501
+    def groups_servers_find_by_id(self, group_id, server_id, **kwargs):  # noqa: E501
+        """Get Auto Scaling Group Server by ID  # noqa: E501
 
-        Retrieve the properties of the specificed server in autoscaling group.  Please note that the autoscaling group server IDs are distinct from, and do not match the VM server IDs in the data center.  # noqa: E501
+        Retrieves the properties of the server specified by its ID.  >Note that the server IDs of the Auto Scaling groups are different from and do not match the VM server IDs in the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.autoscaling_groups_servers_find_by_id(group_id, server_id, async_req=True)
+        >>> thread = api.groups_servers_find_by_id(group_id, server_id, async_req=True)
         >>> result = thread.get()
 
         :param group_id: (required)
         :type group_id: str
         :param server_id: (required)
         :type server_id: str
-        :param depth: Controls the detail depth of the response objects.    - depth=0: Only direct properties are included; children (such as executions or transitions) are not included.    - depth=1: Direct properties and children references are included.    - depth=2: Direct properties and children properties are included.    - depth=3: Direct properties and children properties and children's children are included.    - depth=... and so on  
+        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1069,23 +1069,23 @@ class GroupsApi(object):
         :rtype: Server
         """
         kwargs['_return_http_data_only'] = True
-        return self.autoscaling_groups_servers_find_by_id_with_http_info(group_id, server_id, **kwargs)  # noqa: E501
+        return self.groups_servers_find_by_id_with_http_info(group_id, server_id, **kwargs)  # noqa: E501
 
-    def autoscaling_groups_servers_find_by_id_with_http_info(self, group_id, server_id, **kwargs):  # noqa: E501
-        """Retrieve group servers by UUID  # noqa: E501
+    def groups_servers_find_by_id_with_http_info(self, group_id, server_id, **kwargs):  # noqa: E501
+        """Get Auto Scaling Group Server by ID  # noqa: E501
 
-        Retrieve the properties of the specificed server in autoscaling group.  Please note that the autoscaling group server IDs are distinct from, and do not match the VM server IDs in the data center.  # noqa: E501
+        Retrieves the properties of the server specified by its ID.  >Note that the server IDs of the Auto Scaling groups are different from and do not match the VM server IDs in the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.autoscaling_groups_servers_find_by_id_with_http_info(group_id, server_id, async_req=True)
+        >>> thread = api.groups_servers_find_by_id_with_http_info(group_id, server_id, async_req=True)
         >>> result = thread.get()
 
         :param group_id: (required)
         :type group_id: str
         :param server_id: (required)
         :type server_id: str
-        :param depth: Controls the detail depth of the response objects.    - depth=0: Only direct properties are included; children (such as executions or transitions) are not included.    - depth=1: Direct properties and children references are included.    - depth=2: Direct properties and children properties are included.    - depth=3: Direct properties and children properties and children's children are included.    - depth=... and so on  
+        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1133,18 +1133,18 @@ class GroupsApi(object):
             if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method autoscaling_groups_servers_find_by_id" % local_var_params_key
+                    " to method groups_servers_find_by_id" % local_var_params_key
                 )
             local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'group_id' is set
         if self.api_client.client_side_validation and ('group_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['group_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `group_id` when calling `autoscaling_groups_servers_find_by_id`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `group_id` when calling `groups_servers_find_by_id`")  # noqa: E501
         # verify the required parameter 'server_id' is set
         if self.api_client.client_side_validation and ('server_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['server_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `server_id` when calling `autoscaling_groups_servers_find_by_id`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `server_id` when calling `groups_servers_find_by_id`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1176,7 +1176,7 @@ class GroupsApi(object):
             response_type = kwargs['response_type']
 
         return self.api_client.call_api(
-            '/cloudapi/autoscaling/groups/{groupId}/servers/{serverId}', 'GET',
+            '/groups/{groupId}/servers/{serverId}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1192,21 +1192,21 @@ class GroupsApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def autoscaling_groups_servers_get(self, group_id, **kwargs):  # noqa: E501
-        """Retrieve autoscaling group servers  # noqa: E501
+    def groups_servers_get(self, group_id, **kwargs):  # noqa: E501
+        """Get Auto Scaling Group Servers  # noqa: E501
 
-        Retrieve all servers, associated with the specified autoscaling group.  Please note that the autoscaling group server IDs are distinct from, and do not match the VM server IDs in the data center.  # noqa: E501
+        Retrieves all servers associated with the Auto Scaling group specified by its ID.   >Note that the server IDs of the Auto Scaling groups are different from and do not match the VM server IDs in the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.autoscaling_groups_servers_get(group_id, async_req=True)
+        >>> thread = api.groups_servers_get(group_id, async_req=True)
         >>> result = thread.get()
 
         :param group_id: (required)
         :type group_id: str
-        :param depth: Controls the detail depth of the response objects.    - depth=0: Only direct properties are included; children (such as executions or transitions) are not included.    - depth=1: Direct properties and children references are included.    - depth=2: Direct properties and children properties are included.    - depth=3: Direct properties and children properties and children's children are included.    - depth=... and so on  
+        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
-        :param order_by: Define the property to be used for ordering the returned list; valid values are 'createdDate' and 'lastModifiedDate'.
+        :param order_by: Use this parameter to specify by which the returned list should be sorted. Valid values are: ``createdDate`` and ``lastModifiedDate``.
         :type order_by: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1224,23 +1224,23 @@ class GroupsApi(object):
         :rtype: ServerCollection
         """
         kwargs['_return_http_data_only'] = True
-        return self.autoscaling_groups_servers_get_with_http_info(group_id, **kwargs)  # noqa: E501
+        return self.groups_servers_get_with_http_info(group_id, **kwargs)  # noqa: E501
 
-    def autoscaling_groups_servers_get_with_http_info(self, group_id, **kwargs):  # noqa: E501
-        """Retrieve autoscaling group servers  # noqa: E501
+    def groups_servers_get_with_http_info(self, group_id, **kwargs):  # noqa: E501
+        """Get Auto Scaling Group Servers  # noqa: E501
 
-        Retrieve all servers, associated with the specified autoscaling group.  Please note that the autoscaling group server IDs are distinct from, and do not match the VM server IDs in the data center.  # noqa: E501
+        Retrieves all servers associated with the Auto Scaling group specified by its ID.   >Note that the server IDs of the Auto Scaling groups are different from and do not match the VM server IDs in the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.autoscaling_groups_servers_get_with_http_info(group_id, async_req=True)
+        >>> thread = api.groups_servers_get_with_http_info(group_id, async_req=True)
         >>> result = thread.get()
 
         :param group_id: (required)
         :type group_id: str
-        :param depth: Controls the detail depth of the response objects.    - depth=0: Only direct properties are included; children (such as executions or transitions) are not included.    - depth=1: Direct properties and children references are included.    - depth=2: Direct properties and children properties are included.    - depth=3: Direct properties and children properties and children's children are included.    - depth=... and so on  
+        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
-        :param order_by: Define the property to be used for ordering the returned list; valid values are 'createdDate' and 'lastModifiedDate'.
+        :param order_by: Use this parameter to specify by which the returned list should be sorted. Valid values are: ``createdDate`` and ``lastModifiedDate``.
         :type order_by: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1288,14 +1288,14 @@ class GroupsApi(object):
             if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method autoscaling_groups_servers_get" % local_var_params_key
+                    " to method groups_servers_get" % local_var_params_key
                 )
             local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'group_id' is set
         if self.api_client.client_side_validation and ('group_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['group_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `group_id` when calling `autoscaling_groups_servers_get`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `group_id` when calling `groups_servers_get`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1327,7 +1327,7 @@ class GroupsApi(object):
             response_type = kwargs['response_type']
 
         return self.api_client.call_api(
-            '/cloudapi/autoscaling/groups/{groupId}/servers', 'GET',
+            '/groups/{groupId}/servers', 'GET',
             path_params,
             query_params,
             header_params,

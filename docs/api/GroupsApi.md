@@ -1,26 +1,26 @@
 # GroupsApi
 
-All URIs are relative to *https://api.ionos.com*
+All URIs are relative to *https://api.ionos.com/cloudapi/autoscaling*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**autoscaling_groups_actions_find_by_id**](GroupsApi.md#autoscaling_groups_actions_find_by_id) | **GET** /cloudapi/autoscaling/groups/{groupId}/actions/{actionId} | Retrieve action details |
-| [**autoscaling_groups_actions_get**](GroupsApi.md#autoscaling_groups_actions_get) | **GET** /cloudapi/autoscaling/groups/{groupId}/actions | Retrieve last ten actions |
-| [**autoscaling_groups_delete**](GroupsApi.md#autoscaling_groups_delete) | **DELETE** /cloudapi/autoscaling/groups/{groupId} | Delete autoscaling groups. |
-| [**autoscaling_groups_find_by_id**](GroupsApi.md#autoscaling_groups_find_by_id) | **GET** /cloudapi/autoscaling/groups/{groupId} | Retrieve autoscaling groups by UUID |
-| [**autoscaling_groups_get**](GroupsApi.md#autoscaling_groups_get) | **GET** /cloudapi/autoscaling/groups | List autoscaling groups |
-| [**autoscaling_groups_post**](GroupsApi.md#autoscaling_groups_post) | **POST** /cloudapi/autoscaling/groups | Create autoscaling groups |
-| [**autoscaling_groups_put**](GroupsApi.md#autoscaling_groups_put) | **PUT** /cloudapi/autoscaling/groups/{groupId} | Update autoscaling groups |
-| [**autoscaling_groups_servers_find_by_id**](GroupsApi.md#autoscaling_groups_servers_find_by_id) | **GET** /cloudapi/autoscaling/groups/{groupId}/servers/{serverId} | Retrieve group servers by UUID |
-| [**autoscaling_groups_servers_get**](GroupsApi.md#autoscaling_groups_servers_get) | **GET** /cloudapi/autoscaling/groups/{groupId}/servers | Retrieve autoscaling group servers |
+| [**groups_actions_find_by_id**](GroupsApi.md#groups_actions_find_by_id) | **GET** /groups/{groupId}/actions/{actionId} | Get Scaling Action Details by ID |
+| [**groups_actions_get**](GroupsApi.md#groups_actions_get) | **GET** /groups/{groupId}/actions | Get Scaling Actions |
+| [**groups_delete**](GroupsApi.md#groups_delete) | **DELETE** /groups/{groupId} | Delete an Auto Scaling Group by ID |
+| [**groups_find_by_id**](GroupsApi.md#groups_find_by_id) | **GET** /groups/{groupId} | Get an Auto Scaling by ID |
+| [**groups_get**](GroupsApi.md#groups_get) | **GET** /groups | Get Auto Scaling Groups |
+| [**groups_post**](GroupsApi.md#groups_post) | **POST** /groups | Create an Auto Scaling Group |
+| [**groups_put**](GroupsApi.md#groups_put) | **PUT** /groups/{groupId} | Update an Auto Scaling Group by ID |
+| [**groups_servers_find_by_id**](GroupsApi.md#groups_servers_find_by_id) | **GET** /groups/{groupId}/servers/{serverId} | Get Auto Scaling Group Server by ID |
+| [**groups_servers_get**](GroupsApi.md#groups_servers_get) | **GET** /groups/{groupId}/servers | Get Auto Scaling Group Servers |
 
 
-# **autoscaling_groups_actions_find_by_id**
-> Action autoscaling_groups_actions_find_by_id(action_id, group_id, depth=depth)
+# **groups_actions_find_by_id**
+> Action groups_actions_find_by_id(action_id, group_id, depth=depth)
 
-Retrieve action details
+Get Scaling Action Details by ID
 
-Retrieve the details, such as metadata, properties, and the current status, for the specified action.
+Retrieves the details of a scaling action specified by its ID. This operation returns metadata, properties, and the current status, for the specified scaling action
 
 ### Example
 
@@ -30,9 +30,9 @@ import time
 import ionoscloud_vm_autoscaling
 from ionoscloud_vm_autoscaling.rest import ApiException
 
-# Defining the host is optional and defaults to https://api.ionos.com
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/autoscaling
 configuration = ionoscloud_vm_autoscaling.Configuration(
-    host = 'https://api.ionos.com',
+    host = 'https://api.ionos.com/cloudapi/autoscaling',
 )
 
 # Example of configuring HTTP Basic Authorization
@@ -45,20 +45,20 @@ with ionoscloud_vm_autoscaling.ApiClient(configuration) as api_client:
     action_id = 'action_id_example' # str | 
     group_id = 'group_id_example' # str | 
     try:
-        # Retrieve action details
-        api_response = api_instance.autoscaling_groups_actions_find_by_id(action_id, group_id)
+        # Get Scaling Action Details by ID
+        api_response = api_instance.groups_actions_find_by_id(action_id, group_id)
         print(api_response)
     except ApiException as e:
-        print('Exception when calling GroupsApi.autoscaling_groups_actions_find_by_id: %s\n' % e)
+        print('Exception when calling GroupsApi.groups_actions_find_by_id: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **action_id** | [**str**](.md)|  |  |
+| **action_id** | [**str**](../models/.md)|  |  |
 | **group_id** | **str**|  |  |
-| **depth** | **float**| Controls the detail depth of the response objects.    - depth&#x3D;0: Only direct properties are included; children (such as executions or transitions) are not included.    - depth&#x3D;1: Direct properties and children references are included.    - depth&#x3D;2: Direct properties and children properties are included.    - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.    - depth&#x3D;... and so on   | [optional]  |
+| **depth** | **float**| With this parameter, you control the level of detail of the response objects:    - &#x60;&#x60;0&#x60;&#x60;: Only direct properties are included; children (such as executions or transitions) are not considered.    - &#x60;&#x60;1&#x60;&#x60;: Direct properties and children references are included.    - &#x60;&#x60;2&#x60;&#x60;: Direct properties and children properties are included.    - &#x60;&#x60;3&#x60;&#x60;: Direct properties and children properties and children&#39;s children are included.    - etc.   | [optional]  |
 
 ### Return type
 
@@ -73,12 +73,12 @@ basicAuth, tokenAuth
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-# **autoscaling_groups_actions_get**
-> ActionCollection autoscaling_groups_actions_get(group_id, depth=depth, order_by=order_by)
+# **groups_actions_get**
+> ActionCollection groups_actions_get(group_id, depth=depth, order_by=order_by)
 
-Retrieve last ten actions
+Get Scaling Actions
 
-Retrieve the scaling actions for the specified autoscaling group; presently, only the last ten actions are returned.
+Retrieves the list of the scaling actions for the Auto Scaling group specified by its ID.    >Note that currently, only the last ten actions are returned.
 
 ### Example
 
@@ -88,9 +88,9 @@ import time
 import ionoscloud_vm_autoscaling
 from ionoscloud_vm_autoscaling.rest import ApiException
 
-# Defining the host is optional and defaults to https://api.ionos.com
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/autoscaling
 configuration = ionoscloud_vm_autoscaling.Configuration(
-    host = 'https://api.ionos.com',
+    host = 'https://api.ionos.com/cloudapi/autoscaling',
 )
 
 # Example of configuring HTTP Basic Authorization
@@ -102,11 +102,11 @@ with ionoscloud_vm_autoscaling.ApiClient(configuration) as api_client:
     api_instance = ionoscloud_vm_autoscaling.GroupsApi(api_client)
     group_id = 'group_id_example' # str | 
     try:
-        # Retrieve last ten actions
-        api_response = api_instance.autoscaling_groups_actions_get(group_id)
+        # Get Scaling Actions
+        api_response = api_instance.groups_actions_get(group_id)
         print(api_response)
     except ApiException as e:
-        print('Exception when calling GroupsApi.autoscaling_groups_actions_get: %s\n' % e)
+        print('Exception when calling GroupsApi.groups_actions_get: %s\n' % e)
 ```
 
 ### Parameters
@@ -114,8 +114,8 @@ with ionoscloud_vm_autoscaling.ApiClient(configuration) as api_client:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **group_id** | **str**|  |  |
-| **depth** | **float**| Controls the detail depth of the response objects.    - depth&#x3D;0: Only direct properties are included; children (such as executions or transitions) are not included.    - depth&#x3D;1: Direct properties and children references are included.    - depth&#x3D;2: Direct properties and children properties are included.    - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.    - depth&#x3D;... and so on   | [optional]  |
-| **order_by** | **str**| Define the property to be used for ordering the returned list; valid values are &#39;createdDate&#39; and &#39;lastModifiedDate&#39;. | [optional] [default to &#39;createdDate&#39;] |
+| **depth** | **float**| With this parameter, you control the level of detail of the response objects:    - &#x60;&#x60;0&#x60;&#x60;: Only direct properties are included; children (such as executions or transitions) are not considered.    - &#x60;&#x60;1&#x60;&#x60;: Direct properties and children references are included.    - &#x60;&#x60;2&#x60;&#x60;: Direct properties and children properties are included.    - &#x60;&#x60;3&#x60;&#x60;: Direct properties and children properties and children&#39;s children are included.    - etc.   | [optional]  |
+| **order_by** | **str**| Use this parameter to specify by which the returned list should be sorted. Valid values are: &#x60;&#x60;createdDate&#x60;&#x60; and &#x60;&#x60;lastModifiedDate&#x60;&#x60;. | [optional] [default to &#39;createdDate&#39;] |
 
 ### Return type
 
@@ -130,12 +130,12 @@ basicAuth, tokenAuth
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-# **autoscaling_groups_delete**
-> autoscaling_groups_delete(group_id)
+# **groups_delete**
+> groups_delete(group_id)
 
-Delete autoscaling groups.
+Delete an Auto Scaling Group by ID
 
-Delete the specified autoscaling group; deletion of the associated servers and volumes is presently not implemented.
+Deletes the Auto Scaling group specified by its ID.  >Deleting the associated servers and disks is currently not implemented.
 
 ### Example
 
@@ -145,9 +145,9 @@ import time
 import ionoscloud_vm_autoscaling
 from ionoscloud_vm_autoscaling.rest import ApiException
 
-# Defining the host is optional and defaults to https://api.ionos.com
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/autoscaling
 configuration = ionoscloud_vm_autoscaling.Configuration(
-    host = 'https://api.ionos.com',
+    host = 'https://api.ionos.com/cloudapi/autoscaling',
 )
 
 # Example of configuring HTTP Basic Authorization
@@ -159,17 +159,17 @@ with ionoscloud_vm_autoscaling.ApiClient(configuration) as api_client:
     api_instance = ionoscloud_vm_autoscaling.GroupsApi(api_client)
     group_id = 'group_id_example' # str | 
     try:
-        # Delete autoscaling groups.
-        api_instance.autoscaling_groups_delete(group_id)
+        # Delete an Auto Scaling Group by ID
+        api_instance.groups_delete(group_id)
     except ApiException as e:
-        print('Exception when calling GroupsApi.autoscaling_groups_delete: %s\n' % e)
+        print('Exception when calling GroupsApi.groups_delete: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **group_id** | [**str**](.md)|  |  |
+| **group_id** | [**str**](../models/.md)|  |  |
 
 ### Return type
 
@@ -184,12 +184,12 @@ basicAuth, tokenAuth
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-# **autoscaling_groups_find_by_id**
-> Group autoscaling_groups_find_by_id(group_id, depth=depth)
+# **groups_find_by_id**
+> Group groups_find_by_id(group_id, depth=depth)
 
-Retrieve autoscaling groups by UUID
+Get an Auto Scaling by ID
 
-Retrieve the details for the autoscaling group with the specified UUID.
+Retrieves the Auto Scaling group specified by its ID including the details.
 
 ### Example
 
@@ -199,9 +199,9 @@ import time
 import ionoscloud_vm_autoscaling
 from ionoscloud_vm_autoscaling.rest import ApiException
 
-# Defining the host is optional and defaults to https://api.ionos.com
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/autoscaling
 configuration = ionoscloud_vm_autoscaling.Configuration(
-    host = 'https://api.ionos.com',
+    host = 'https://api.ionos.com/cloudapi/autoscaling',
 )
 
 # Example of configuring HTTP Basic Authorization
@@ -213,11 +213,11 @@ with ionoscloud_vm_autoscaling.ApiClient(configuration) as api_client:
     api_instance = ionoscloud_vm_autoscaling.GroupsApi(api_client)
     group_id = 'group_id_example' # str | 
     try:
-        # Retrieve autoscaling groups by UUID
-        api_response = api_instance.autoscaling_groups_find_by_id(group_id)
+        # Get an Auto Scaling by ID
+        api_response = api_instance.groups_find_by_id(group_id)
         print(api_response)
     except ApiException as e:
-        print('Exception when calling GroupsApi.autoscaling_groups_find_by_id: %s\n' % e)
+        print('Exception when calling GroupsApi.groups_find_by_id: %s\n' % e)
 ```
 
 ### Parameters
@@ -225,7 +225,7 @@ with ionoscloud_vm_autoscaling.ApiClient(configuration) as api_client:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **group_id** | **str**|  |  |
-| **depth** | **float**| Controls the detail depth of the response objects.    - depth&#x3D;0: Only direct properties are included; children (such as executions or transitions) are not included.    - depth&#x3D;1: Direct properties and children references are included.    - depth&#x3D;2: Direct properties and children properties are included.    - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.    - depth&#x3D;... and so on   | [optional]  |
+| **depth** | **float**| With this parameter, you control the level of detail of the response objects:    - &#x60;&#x60;0&#x60;&#x60;: Only direct properties are included; children (such as executions or transitions) are not considered.    - &#x60;&#x60;1&#x60;&#x60;: Direct properties and children references are included.    - &#x60;&#x60;2&#x60;&#x60;: Direct properties and children properties are included.    - &#x60;&#x60;3&#x60;&#x60;: Direct properties and children properties and children&#39;s children are included.    - etc.   | [optional]  |
 
 ### Return type
 
@@ -240,12 +240,12 @@ basicAuth, tokenAuth
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-# **autoscaling_groups_get**
-> GroupCollection autoscaling_groups_get(depth=depth, order_by=order_by)
+# **groups_get**
+> GroupCollection groups_get(depth=depth, order_by=order_by)
 
-List autoscaling groups
+Get Auto Scaling Groups
 
-List all autoscaling groups for your account.
+Lists all Auto Scaling groups of your account.
 
 ### Example
 
@@ -255,9 +255,9 @@ import time
 import ionoscloud_vm_autoscaling
 from ionoscloud_vm_autoscaling.rest import ApiException
 
-# Defining the host is optional and defaults to https://api.ionos.com
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/autoscaling
 configuration = ionoscloud_vm_autoscaling.Configuration(
-    host = 'https://api.ionos.com',
+    host = 'https://api.ionos.com/cloudapi/autoscaling',
 )
 
 # Example of configuring HTTP Basic Authorization
@@ -268,19 +268,19 @@ with ionoscloud_vm_autoscaling.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud_vm_autoscaling.GroupsApi(api_client)
     try:
-        # List autoscaling groups
-        api_response = api_instance.autoscaling_groups_get()
+        # Get Auto Scaling Groups
+        api_response = api_instance.groups_get()
         print(api_response)
     except ApiException as e:
-        print('Exception when calling GroupsApi.autoscaling_groups_get: %s\n' % e)
+        print('Exception when calling GroupsApi.groups_get: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **depth** | **float**| Controls the detail depth of the response objects.    - depth&#x3D;0: Only direct properties are included; children (such as executions or transitions) are not included.    - depth&#x3D;1: Direct properties and children references are included.    - depth&#x3D;2: Direct properties and children properties are included.    - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.    - depth&#x3D;... and so on   | [optional]  |
-| **order_by** | **str**| Define the property to be used for ordering the returned list; valid values are &#39;createdDate&#39; and &#39;lastModifiedDate&#39;. | [optional] [default to &#39;createdDate&#39;] |
+| **depth** | **float**| With this parameter, you control the level of detail of the response objects:    - &#x60;&#x60;0&#x60;&#x60;: Only direct properties are included; children (such as executions or transitions) are not considered.    - &#x60;&#x60;1&#x60;&#x60;: Direct properties and children references are included.    - &#x60;&#x60;2&#x60;&#x60;: Direct properties and children properties are included.    - &#x60;&#x60;3&#x60;&#x60;: Direct properties and children properties and children&#39;s children are included.    - etc.   | [optional]  |
+| **order_by** | **str**| Use this parameter to specify by which the returned list should be sorted. Valid values are: &#x60;&#x60;createdDate&#x60;&#x60; and &#x60;&#x60;lastModifiedDate&#x60;&#x60;. | [optional] [default to &#39;createdDate&#39;] |
 
 ### Return type
 
@@ -295,12 +295,12 @@ basicAuth, tokenAuth
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-# **autoscaling_groups_post**
-> GroupPostResponse autoscaling_groups_post(group)
+# **groups_post**
+> GroupPostResponse groups_post(group_post)
 
-Create autoscaling groups
+Create an Auto Scaling Group
 
-Create autoscaling groups with this POST method. Creation of a group will trigger the creation of two monitoring alarms, for ‘Scale In’ and ‘Scale Out’ operations, according to \"policy\" settings.   \"properties.name\" must not be null or blank.   \"properties.targetReplicaCount\" is optional attribute which must be >= minReplicaCount and <= maxReplicaCount if provided in the request body.   \"properties.minReplicaCount\" must be >= 0 and <= 200.   \"properties.maxReplicaCount\" must be >= 0 and <= 200.   \"properties.datacenter.id\" must be a valid data center ID.   \"properties.policy.metric\" must be one of: INSTANCE_CPU_UTILIZATION_AVERAGE, INSTANCE_NETWORK_IN_BYTES, INSTANCE_NETWORK_OUT_BYTES, INSTANCE_NETWORK_IN_PACKETS, INSTANCE_NETWORK_OUT_PACKETS.   \"properties.policy.unit\" must be one of:  PER_SECOND, PER_MINUTE, PER_HOUR, TOTAL.  TOTAL can be combined only with INSTANCE_CPU_UTILIZATION_AVERAGE.   \"properties.policy.range\" must be >= 2 minutes.   If \"properties.policy.unit\" is \"TOTAL\", then \"properties.policy.scaleOutThreshold - properties.policy.scaleInThreshold\" must be >= 40.    \"properties.policy.scaleInAction.amount\" (the same is true for \"properties.policy.scaleOutAction.amount\") must be:   in case of properties.policy.scaleInAction.amountType = ABSOLUTE: 1 <= properties.policy.scaleInAction.amount <= 10  in case of properties.policy.scaleInAction.amountType = PERCENTAGE: 1 <= properties.policy.scaleInAction.amount <= 200   \"properties.policy.scaleInAction.cooldownPeriod\" (the same is true for \"properties.policy.scaleOutAction.cooldownPeriod\") must be: >= 2 minutes and <= 24 hours with a default value of 5 minutes if not provided in the request payload or given with null, empty string or spaces.
+Creates an Auto Scaling group.   > Note that creating a group triggers the creation of two monitoring alarms for 'Scale-In' and 'Scale-Out' operations according to the 'Policy' settings.
 
 ### Example
 
@@ -310,9 +310,9 @@ import time
 import ionoscloud_vm_autoscaling
 from ionoscloud_vm_autoscaling.rest import ApiException
 
-# Defining the host is optional and defaults to https://api.ionos.com
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/autoscaling
 configuration = ionoscloud_vm_autoscaling.Configuration(
-    host = 'https://api.ionos.com',
+    host = 'https://api.ionos.com/cloudapi/autoscaling',
 )
 
 # Example of configuring HTTP Basic Authorization
@@ -322,20 +322,20 @@ configuration.password = 'YOUR_PASSWORD'
 with ionoscloud_vm_autoscaling.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud_vm_autoscaling.GroupsApi(api_client)
-    group = ionoscloud_vm_autoscaling.Group() # Group | 
+    group_post = ionoscloud_vm_autoscaling.GroupPost() # GroupPost | 
     try:
-        # Create autoscaling groups
-        api_response = api_instance.autoscaling_groups_post(group)
+        # Create an Auto Scaling Group
+        api_response = api_instance.groups_post(group_post)
         print(api_response)
     except ApiException as e:
-        print('Exception when calling GroupsApi.autoscaling_groups_post: %s\n' % e)
+        print('Exception when calling GroupsApi.groups_post: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **group** | [**Group**](Group.md)|  |  |
+| **group_post** | [**GroupPost**](../models/GroupPost.md)|  |  |
 
 ### Return type
 
@@ -350,12 +350,12 @@ basicAuth, tokenAuth
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-# **autoscaling_groups_put**
-> Group autoscaling_groups_put(group_id, group_update)
+# **groups_put**
+> Group groups_put(group_id, group_put)
 
-Update autoscaling groups
+Update an Auto Scaling Group by ID
 
-Update the specified autoscaling group. \"properties.datacenter.id\" is immutable after creation and cannot be updated.  The other validations are the same as when creating a group.
+Updates the Auto Scaling group specified by its ID. The IDs assigned by the system when the resource is created, such as 'properties.datacenter.id' and 'backupunitId', are immutable and cannot be updated.
 
 ### Example
 
@@ -365,9 +365,9 @@ import time
 import ionoscloud_vm_autoscaling
 from ionoscloud_vm_autoscaling.rest import ApiException
 
-# Defining the host is optional and defaults to https://api.ionos.com
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/autoscaling
 configuration = ionoscloud_vm_autoscaling.Configuration(
-    host = 'https://api.ionos.com',
+    host = 'https://api.ionos.com/cloudapi/autoscaling',
 )
 
 # Example of configuring HTTP Basic Authorization
@@ -378,21 +378,21 @@ with ionoscloud_vm_autoscaling.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud_vm_autoscaling.GroupsApi(api_client)
     group_id = 'group_id_example' # str | 
-    group_update = ionoscloud_vm_autoscaling.GroupUpdate() # GroupUpdate | 
+    group_put = ionoscloud_vm_autoscaling.GroupPut() # GroupPut | 
     try:
-        # Update autoscaling groups
-        api_response = api_instance.autoscaling_groups_put(group_id, group_update)
+        # Update an Auto Scaling Group by ID
+        api_response = api_instance.groups_put(group_id, group_put)
         print(api_response)
     except ApiException as e:
-        print('Exception when calling GroupsApi.autoscaling_groups_put: %s\n' % e)
+        print('Exception when calling GroupsApi.groups_put: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **group_id** | [**str**](.md)|  |  |
-| **group_update** | [**GroupUpdate**](GroupUpdate.md)|  |  |
+| **group_id** | [**str**](../models/.md)|  |  |
+| **group_put** | [**GroupPut**](../models/GroupPut.md)|  |  |
 
 ### Return type
 
@@ -407,12 +407,12 @@ basicAuth, tokenAuth
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-# **autoscaling_groups_servers_find_by_id**
-> Server autoscaling_groups_servers_find_by_id(group_id, server_id, depth=depth)
+# **groups_servers_find_by_id**
+> Server groups_servers_find_by_id(group_id, server_id, depth=depth)
 
-Retrieve group servers by UUID
+Get Auto Scaling Group Server by ID
 
-Retrieve the properties of the specificed server in autoscaling group.  Please note that the autoscaling group server IDs are distinct from, and do not match the VM server IDs in the data center.
+Retrieves the properties of the server specified by its ID.  >Note that the server IDs of the Auto Scaling groups are different from and do not match the VM server IDs in the data center.
 
 ### Example
 
@@ -422,9 +422,9 @@ import time
 import ionoscloud_vm_autoscaling
 from ionoscloud_vm_autoscaling.rest import ApiException
 
-# Defining the host is optional and defaults to https://api.ionos.com
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/autoscaling
 configuration = ionoscloud_vm_autoscaling.Configuration(
-    host = 'https://api.ionos.com',
+    host = 'https://api.ionos.com/cloudapi/autoscaling',
 )
 
 # Example of configuring HTTP Basic Authorization
@@ -437,11 +437,11 @@ with ionoscloud_vm_autoscaling.ApiClient(configuration) as api_client:
     group_id = 'group_id_example' # str | 
     server_id = 'server_id_example' # str | 
     try:
-        # Retrieve group servers by UUID
-        api_response = api_instance.autoscaling_groups_servers_find_by_id(group_id, server_id)
+        # Get Auto Scaling Group Server by ID
+        api_response = api_instance.groups_servers_find_by_id(group_id, server_id)
         print(api_response)
     except ApiException as e:
-        print('Exception when calling GroupsApi.autoscaling_groups_servers_find_by_id: %s\n' % e)
+        print('Exception when calling GroupsApi.groups_servers_find_by_id: %s\n' % e)
 ```
 
 ### Parameters
@@ -449,8 +449,8 @@ with ionoscloud_vm_autoscaling.ApiClient(configuration) as api_client:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **group_id** | **str**|  |  |
-| **server_id** | [**str**](.md)|  |  |
-| **depth** | **float**| Controls the detail depth of the response objects.    - depth&#x3D;0: Only direct properties are included; children (such as executions or transitions) are not included.    - depth&#x3D;1: Direct properties and children references are included.    - depth&#x3D;2: Direct properties and children properties are included.    - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.    - depth&#x3D;... and so on   | [optional]  |
+| **server_id** | [**str**](../models/.md)|  |  |
+| **depth** | **float**| With this parameter, you control the level of detail of the response objects:    - &#x60;&#x60;0&#x60;&#x60;: Only direct properties are included; children (such as executions or transitions) are not considered.    - &#x60;&#x60;1&#x60;&#x60;: Direct properties and children references are included.    - &#x60;&#x60;2&#x60;&#x60;: Direct properties and children properties are included.    - &#x60;&#x60;3&#x60;&#x60;: Direct properties and children properties and children&#39;s children are included.    - etc.   | [optional]  |
 
 ### Return type
 
@@ -465,12 +465,12 @@ basicAuth, tokenAuth
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-# **autoscaling_groups_servers_get**
-> ServerCollection autoscaling_groups_servers_get(group_id, depth=depth, order_by=order_by)
+# **groups_servers_get**
+> ServerCollection groups_servers_get(group_id, depth=depth, order_by=order_by)
 
-Retrieve autoscaling group servers
+Get Auto Scaling Group Servers
 
-Retrieve all servers, associated with the specified autoscaling group.  Please note that the autoscaling group server IDs are distinct from, and do not match the VM server IDs in the data center.
+Retrieves all servers associated with the Auto Scaling group specified by its ID.   >Note that the server IDs of the Auto Scaling groups are different from and do not match the VM server IDs in the data center.
 
 ### Example
 
@@ -480,9 +480,9 @@ import time
 import ionoscloud_vm_autoscaling
 from ionoscloud_vm_autoscaling.rest import ApiException
 
-# Defining the host is optional and defaults to https://api.ionos.com
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/autoscaling
 configuration = ionoscloud_vm_autoscaling.Configuration(
-    host = 'https://api.ionos.com',
+    host = 'https://api.ionos.com/cloudapi/autoscaling',
 )
 
 # Example of configuring HTTP Basic Authorization
@@ -494,11 +494,11 @@ with ionoscloud_vm_autoscaling.ApiClient(configuration) as api_client:
     api_instance = ionoscloud_vm_autoscaling.GroupsApi(api_client)
     group_id = 'group_id_example' # str | 
     try:
-        # Retrieve autoscaling group servers
-        api_response = api_instance.autoscaling_groups_servers_get(group_id)
+        # Get Auto Scaling Group Servers
+        api_response = api_instance.groups_servers_get(group_id)
         print(api_response)
     except ApiException as e:
-        print('Exception when calling GroupsApi.autoscaling_groups_servers_get: %s\n' % e)
+        print('Exception when calling GroupsApi.groups_servers_get: %s\n' % e)
 ```
 
 ### Parameters
@@ -506,8 +506,8 @@ with ionoscloud_vm_autoscaling.ApiClient(configuration) as api_client:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **group_id** | **str**|  |  |
-| **depth** | **float**| Controls the detail depth of the response objects.    - depth&#x3D;0: Only direct properties are included; children (such as executions or transitions) are not included.    - depth&#x3D;1: Direct properties and children references are included.    - depth&#x3D;2: Direct properties and children properties are included.    - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.    - depth&#x3D;... and so on   | [optional]  |
-| **order_by** | **str**| Define the property to be used for ordering the returned list; valid values are &#39;createdDate&#39; and &#39;lastModifiedDate&#39;. | [optional] [default to &#39;createdDate&#39;] |
+| **depth** | **float**| With this parameter, you control the level of detail of the response objects:    - &#x60;&#x60;0&#x60;&#x60;: Only direct properties are included; children (such as executions or transitions) are not considered.    - &#x60;&#x60;1&#x60;&#x60;: Direct properties and children references are included.    - &#x60;&#x60;2&#x60;&#x60;: Direct properties and children properties are included.    - &#x60;&#x60;3&#x60;&#x60;: Direct properties and children properties and children&#39;s children are included.    - etc.   | [optional]  |
+| **order_by** | **str**| Use this parameter to specify by which the returned list should be sorted. Valid values are: &#x60;&#x60;createdDate&#x60;&#x60; and &#x60;&#x60;lastModifiedDate&#x60;&#x60;. | [optional] [default to &#39;createdDate&#39;] |
 
 ### Return type
 
