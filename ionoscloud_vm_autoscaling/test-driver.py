@@ -17,6 +17,8 @@ else:
         'ionoscloud_cert_manager',
         'ionoscloud_dataplatform',
         'ionoscloud_container_registry',
+        'ionoscloud_dns',
+        'ionoscloud_logging',
     ]
 
     for module_name in module_names_to_import:

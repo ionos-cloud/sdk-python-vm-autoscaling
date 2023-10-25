@@ -1,6 +1,6 @@
 # ServersLinkResource
 
-The servers linked to the Auto Scaling group.
+The servers linked to the VM Auto Scaling Group.
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |

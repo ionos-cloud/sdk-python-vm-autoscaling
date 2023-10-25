@@ -3,7 +3,7 @@
 """
     VM Auto Scaling API
 
-    The VM Auto Scaling Service enables IONOS clients to horizontally scale the number of VM replicas based on configured rules. You can use Auto Scaling to ensure that you have a sufficient number of replicas to handle your application loads at all times.  For this purpose, create an Auto Scaling group that contains the server replicas. The VM Auto Scaling Service ensures that the number of replicas in the group is always within the defined limits. For example, if the number of target replicas is specified, Auto Scaling maintains the specified number of replicas.   When scaling policies are set, Auto Scaling creates or deletes replicas according to the requirements of your applications. For each policy, specified 'scale-in' and 'scale-out' actions are performed when the corresponding thresholds are reached.  # noqa: E501
+    The VM Auto Scaling Service enables IONOS clients to horizontally scale the number of VM replicas based on configured rules. You can use VM Auto Scaling to ensure that you have a sufficient number of replicas to handle your application loads at all times.  For this purpose, create a VM Auto Scaling Group that contains the server replicas. The VM Auto Scaling Service ensures that the number of replicas in the group is always within the defined limits.   When scaling policies are set, VM Auto Scaling creates or deletes replicas according to the requirements of your applications. For each policy, specified 'scale-in' and 'scale-out' actions are performed when the corresponding thresholds are reached.  # noqa: E501
 
     The version of the OpenAPI document: 1-SDK.1
     Contact: support@cloud.ionos.com
@@ -35,15 +35,13 @@ class GroupProperties(object):
     """
     openapi_types = {
 
-        'datacenter': 'GroupPutPropertiesDatacenter',
+        'datacenter': 'GroupPropertiesDatacenter',
 
         'location': 'str',
 
         'max_replica_count': 'int',
 
         'min_replica_count': 'int',
-
-        'target_replica_count': 'int',
 
         'name': 'str',
 
@@ -62,8 +60,6 @@ class GroupProperties(object):
 
         'min_replica_count': 'minReplicaCount',
 
-        'target_replica_count': 'targetReplicaCount',
-
         'name': 'name',
 
         'policy': 'policy',
@@ -71,7 +67,7 @@ class GroupProperties(object):
         'replica_configuration': 'replicaConfiguration',
     }
 
-    def __init__(self, datacenter=None, location=None, max_replica_count=None, min_replica_count=None, target_replica_count=None, name=None, policy=None, replica_configuration=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, datacenter=None, location=None, max_replica_count=None, min_replica_count=None, name=None, policy=None, replica_configuration=None, local_vars_configuration=None):  # noqa: E501
         """GroupProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -81,7 +77,6 @@ class GroupProperties(object):
         self._location = None
         self._max_replica_count = None
         self._min_replica_count = None
-        self._target_replica_count = None
         self._name = None
         self._policy = None
         self._replica_configuration = None
@@ -94,8 +89,6 @@ class GroupProperties(object):
             self.max_replica_count = max_replica_count
         if min_replica_count is not None:
             self.min_replica_count = min_replica_count
-        if target_replica_count is not None:
-            self.target_replica_count = target_replica_count
         if name is not None:
             self.name = name
         if policy is not None:
@@ -110,7 +103,7 @@ class GroupProperties(object):
 
 
         :return: The datacenter of this GroupProperties.  # noqa: E501
-        :rtype: GroupPutPropertiesDatacenter
+        :rtype: GroupPropertiesDatacenter
         """
         return self._datacenter
 
@@ -120,7 +113,7 @@ class GroupProperties(object):
 
 
         :param datacenter: The datacenter of this GroupProperties.  # noqa: E501
-        :type datacenter: GroupPutPropertiesDatacenter
+        :type datacenter: GroupPropertiesDatacenter
         """
 
         self._datacenter = datacenter
@@ -154,7 +147,7 @@ class GroupProperties(object):
     def max_replica_count(self):
         """Gets the max_replica_count of this GroupProperties.  # noqa: E501
 
-        The maximum value for the number of replicas for 'targetReplicaCount'. Must be >= 0 and <= 200. Will be enforced for both automatic and manual changes.  # noqa: E501
+        The maximum value for the number of replicas. Must be >= 0 and <= 100. Will be enforced for both automatic and manual changes.  # noqa: E501
 
         :return: The max_replica_count of this GroupProperties.  # noqa: E501
         :rtype: int
@@ -165,14 +158,14 @@ class GroupProperties(object):
     def max_replica_count(self, max_replica_count):
         """Sets the max_replica_count of this GroupProperties.
 
-        The maximum value for the number of replicas for 'targetReplicaCount'. Must be >= 0 and <= 200. Will be enforced for both automatic and manual changes.  # noqa: E501
+        The maximum value for the number of replicas. Must be >= 0 and <= 100. Will be enforced for both automatic and manual changes.  # noqa: E501
 
         :param max_replica_count: The max_replica_count of this GroupProperties.  # noqa: E501
         :type max_replica_count: int
         """
         if (self.local_vars_configuration.client_side_validation and
-                max_replica_count is not None and max_replica_count > 200):  # noqa: E501
-            raise ValueError("Invalid value for `max_replica_count`, must be a value less than or equal to `200`")  # noqa: E501
+                max_replica_count is not None and max_replica_count > 100):  # noqa: E501
+            raise ValueError("Invalid value for `max_replica_count`, must be a value less than or equal to `100`")  # noqa: E501
         if (self.local_vars_configuration.client_side_validation and
                 max_replica_count is not None and max_replica_count < 0):  # noqa: E501
             raise ValueError("Invalid value for `max_replica_count`, must be a value greater than or equal to `0`")  # noqa: E501
@@ -183,7 +176,7 @@ class GroupProperties(object):
     def min_replica_count(self):
         """Gets the min_replica_count of this GroupProperties.  # noqa: E501
 
-        The minimum value for the number of replicas for 'targetReplicaCount'. Must be >= 0 and <= 200. Will be enforced for both automatic and manual changes  # noqa: E501
+        The minimum value for the number of replicas. Must be >= 0 and <= 100. Will be enforced for both automatic and manual changes  # noqa: E501
 
         :return: The min_replica_count of this GroupProperties.  # noqa: E501
         :rtype: int
@@ -194,14 +187,14 @@ class GroupProperties(object):
     def min_replica_count(self, min_replica_count):
         """Sets the min_replica_count of this GroupProperties.
 
-        The minimum value for the number of replicas for 'targetReplicaCount'. Must be >= 0 and <= 200. Will be enforced for both automatic and manual changes  # noqa: E501
+        The minimum value for the number of replicas. Must be >= 0 and <= 100. Will be enforced for both automatic and manual changes  # noqa: E501
 
         :param min_replica_count: The min_replica_count of this GroupProperties.  # noqa: E501
         :type min_replica_count: int
         """
         if (self.local_vars_configuration.client_side_validation and
-                min_replica_count is not None and min_replica_count > 200):  # noqa: E501
-            raise ValueError("Invalid value for `min_replica_count`, must be a value less than or equal to `200`")  # noqa: E501
+                min_replica_count is not None and min_replica_count > 100):  # noqa: E501
+            raise ValueError("Invalid value for `min_replica_count`, must be a value less than or equal to `100`")  # noqa: E501
         if (self.local_vars_configuration.client_side_validation and
                 min_replica_count is not None and min_replica_count < 0):  # noqa: E501
             raise ValueError("Invalid value for `min_replica_count`, must be a value greater than or equal to `0`")  # noqa: E501
@@ -209,39 +202,10 @@ class GroupProperties(object):
         self._min_replica_count = min_replica_count
 
     @property
-    def target_replica_count(self):
-        """Gets the target_replica_count of this GroupProperties.  # noqa: E501
-
-        The target number of VMs in this group. Depending on the scaling policy, this number is automatically adjusted. VMs are automatically created or destroyed to adjust the actual number of VMs to this target number. If 'targetReplicaCount' is specified in the request body, it must be '>= minReplicaCount' and '<= maxReplicaCount'.  # noqa: E501
-
-        :return: The target_replica_count of this GroupProperties.  # noqa: E501
-        :rtype: int
-        """
-        return self._target_replica_count
-
-    @target_replica_count.setter
-    def target_replica_count(self, target_replica_count):
-        """Sets the target_replica_count of this GroupProperties.
-
-        The target number of VMs in this group. Depending on the scaling policy, this number is automatically adjusted. VMs are automatically created or destroyed to adjust the actual number of VMs to this target number. If 'targetReplicaCount' is specified in the request body, it must be '>= minReplicaCount' and '<= maxReplicaCount'.  # noqa: E501
-
-        :param target_replica_count: The target_replica_count of this GroupProperties.  # noqa: E501
-        :type target_replica_count: int
-        """
-        if (self.local_vars_configuration.client_side_validation and
-                target_replica_count is not None and target_replica_count > 200):  # noqa: E501
-            raise ValueError("Invalid value for `target_replica_count`, must be a value less than or equal to `200`")  # noqa: E501
-        if (self.local_vars_configuration.client_side_validation and
-                target_replica_count is not None and target_replica_count < 0):  # noqa: E501
-            raise ValueError("Invalid value for `target_replica_count`, must be a value greater than or equal to `0`")  # noqa: E501
-
-        self._target_replica_count = target_replica_count
-
-    @property
     def name(self):
         """Gets the name of this GroupProperties.  # noqa: E501
 
-        The name of the Auto Scaling group. This field must not be null or blank.  # noqa: E501
+        The name of the VM Auto Scaling Group. This field must not be null or blank.  # noqa: E501
 
         :return: The name of this GroupProperties.  # noqa: E501
         :rtype: str
@@ -252,7 +216,7 @@ class GroupProperties(object):
     def name(self, name):
         """Sets the name of this GroupProperties.
 
-        The name of the Auto Scaling group. This field must not be null or blank.  # noqa: E501
+        The name of the VM Auto Scaling Group. This field must not be null or blank.  # noqa: E501
 
         :param name: The name of this GroupProperties.  # noqa: E501
         :type name: str

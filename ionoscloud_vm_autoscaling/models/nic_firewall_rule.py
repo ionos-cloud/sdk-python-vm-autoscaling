@@ -3,7 +3,7 @@
 """
     VM Auto Scaling API
 
-    The VM Auto Scaling Service enables IONOS clients to horizontally scale the number of VM replicas based on configured rules. You can use Auto Scaling to ensure that you have a sufficient number of replicas to handle your application loads at all times.  For this purpose, create an Auto Scaling group that contains the server replicas. The VM Auto Scaling Service ensures that the number of replicas in the group is always within the defined limits. For example, if the number of target replicas is specified, Auto Scaling maintains the specified number of replicas.   When scaling policies are set, Auto Scaling creates or deletes replicas according to the requirements of your applications. For each policy, specified 'scale-in' and 'scale-out' actions are performed when the corresponding thresholds are reached.  # noqa: E501
+    The VM Auto Scaling Service enables IONOS clients to horizontally scale the number of VM replicas based on configured rules. You can use VM Auto Scaling to ensure that you have a sufficient number of replicas to handle your application loads at all times.  For this purpose, create a VM Auto Scaling Group that contains the server replicas. The VM Auto Scaling Service ensures that the number of replicas in the group is always within the defined limits.   When scaling policies are set, VM Auto Scaling creates or deletes replicas according to the requirements of your applications. For each policy, specified 'scale-in' and 'scale-out' actions are performed when the corresponding thresholds are reached.  # noqa: E501
 
     The version of the OpenAPI document: 1-SDK.1
     Contact: support@cloud.ionos.com
@@ -303,7 +303,7 @@ class NicFirewallRule(object):
     def port_range_start(self):
         """Gets the port_range_start of this NicFirewallRule.  # noqa: E501
 
-        Sets the initial range of the allowed port (from 1 to 65534) if the protocol TCP or UDP is selected. The value 'null' for 'portRangeStart' and 'portRangeEnd' allows all ports.  # noqa: E501
+        Sets the initial range of the allowed port (from 1 to 65535) if the protocol TCP or UDP is selected. The value 'null' for 'portRangeStart' and 'portRangeEnd' allows all ports.  # noqa: E501
 
         :return: The port_range_start of this NicFirewallRule.  # noqa: E501
         :rtype: int
@@ -314,14 +314,14 @@ class NicFirewallRule(object):
     def port_range_start(self, port_range_start):
         """Sets the port_range_start of this NicFirewallRule.
 
-        Sets the initial range of the allowed port (from 1 to 65534) if the protocol TCP or UDP is selected. The value 'null' for 'portRangeStart' and 'portRangeEnd' allows all ports.  # noqa: E501
+        Sets the initial range of the allowed port (from 1 to 65535) if the protocol TCP or UDP is selected. The value 'null' for 'portRangeStart' and 'portRangeEnd' allows all ports.  # noqa: E501
 
         :param port_range_start: The port_range_start of this NicFirewallRule.  # noqa: E501
         :type port_range_start: int
         """
         if (self.local_vars_configuration.client_side_validation and
-                port_range_start is not None and port_range_start > 65534):  # noqa: E501
-            raise ValueError("Invalid value for `port_range_start`, must be a value less than or equal to `65534`")  # noqa: E501
+                port_range_start is not None and port_range_start > 65535):  # noqa: E501
+            raise ValueError("Invalid value for `port_range_start`, must be a value less than or equal to `65535`")  # noqa: E501
         if (self.local_vars_configuration.client_side_validation and
                 port_range_start is not None and port_range_start < 1):  # noqa: E501
             raise ValueError("Invalid value for `port_range_start`, must be a value greater than or equal to `1`")  # noqa: E501
@@ -332,7 +332,7 @@ class NicFirewallRule(object):
     def port_range_end(self):
         """Gets the port_range_end of this NicFirewallRule.  # noqa: E501
 
-        Sets the end range of the allowed port (from 1 to 65534) if the protocol TCP or UDP is selected. The value 'null' for 'portRangeStart' and 'portRangeEnd' allows all ports.  # noqa: E501
+        Sets the end range of the allowed port (from 1 to 65535) if the protocol TCP or UDP is selected. The value 'null' for 'portRangeStart' and 'portRangeEnd' allows all ports.  # noqa: E501
 
         :return: The port_range_end of this NicFirewallRule.  # noqa: E501
         :rtype: int
@@ -343,14 +343,14 @@ class NicFirewallRule(object):
     def port_range_end(self, port_range_end):
         """Sets the port_range_end of this NicFirewallRule.
 
-        Sets the end range of the allowed port (from 1 to 65534) if the protocol TCP or UDP is selected. The value 'null' for 'portRangeStart' and 'portRangeEnd' allows all ports.  # noqa: E501
+        Sets the end range of the allowed port (from 1 to 65535) if the protocol TCP or UDP is selected. The value 'null' for 'portRangeStart' and 'portRangeEnd' allows all ports.  # noqa: E501
 
         :param port_range_end: The port_range_end of this NicFirewallRule.  # noqa: E501
         :type port_range_end: int
         """
         if (self.local_vars_configuration.client_side_validation and
-                port_range_end is not None and port_range_end > 65534):  # noqa: E501
-            raise ValueError("Invalid value for `port_range_end`, must be a value less than or equal to `65534`")  # noqa: E501
+                port_range_end is not None and port_range_end > 65535):  # noqa: E501
+            raise ValueError("Invalid value for `port_range_end`, must be a value less than or equal to `65535`")  # noqa: E501
         if (self.local_vars_configuration.client_side_validation and
                 port_range_end is not None and port_range_end < 1):  # noqa: E501
             raise ValueError("Invalid value for `port_range_end`, must be a value greater than or equal to `1`")  # noqa: E501

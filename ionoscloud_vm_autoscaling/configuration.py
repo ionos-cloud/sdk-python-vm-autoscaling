@@ -3,7 +3,7 @@
 """
     VM Auto Scaling API
 
-    The VM Auto Scaling Service enables IONOS clients to horizontally scale the number of VM replicas based on configured rules. You can use Auto Scaling to ensure that you have a sufficient number of replicas to handle your application loads at all times.  For this purpose, create an Auto Scaling group that contains the server replicas. The VM Auto Scaling Service ensures that the number of replicas in the group is always within the defined limits. For example, if the number of target replicas is specified, Auto Scaling maintains the specified number of replicas.   When scaling policies are set, Auto Scaling creates or deletes replicas according to the requirements of your applications. For each policy, specified 'scale-in' and 'scale-out' actions are performed when the corresponding thresholds are reached.  # noqa: E501
+    The VM Auto Scaling Service enables IONOS clients to horizontally scale the number of VM replicas based on configured rules. You can use VM Auto Scaling to ensure that you have a sufficient number of replicas to handle your application loads at all times.  For this purpose, create a VM Auto Scaling Group that contains the server replicas. The VM Auto Scaling Service ensures that the number of replicas in the group is always within the defined limits.   When scaling policies are set, VM Auto Scaling creates or deletes replicas according to the requirements of your applications. For each policy, specified 'scale-in' and 'scale-out' actions are performed when the corresponding thresholds are reached.  # noqa: E501
 
     The version of the OpenAPI document: 1-SDK.1
     Contact: support@cloud.ionos.com
@@ -101,22 +101,6 @@ conf = ionoscloud_vm_autoscaling.Configuration(
 
     The following cookie will be added to the HTTP request:
        Cookie: JSESSIONID abc123
-
-    HTTP Basic Authentication Example.
-    Given the following security scheme in the OpenAPI specification:
-      components:
-        securitySchemes:
-          http_basic_auth:
-            type: http
-            scheme: basic
-
-    Configure API client with HTTP basic authentication:
-
-conf = ionoscloud_vm_autoscaling.Configuration(
-    username='the-user',
-    password='the-password',
-)
-
     """
 
     _default = None
@@ -132,7 +116,7 @@ conf = ionoscloud_vm_autoscaling.Configuration(
                  ):
         """Constructor
         """
-        self._base_path = "https://api.ionos.com/cloudapi/autoscaling" if host is None else host
+        self._base_path = "https://api.ionos.com/autoscaling" if host is None else host
         """Default Base url
         """
         self.server_index = 0 if server_index is None and host is None else server_index
@@ -403,13 +387,6 @@ conf = ionoscloud_vm_autoscaling.Configuration(
         :return: The Auth Settings information dict.
         """
         auth = {}
-        if self.username is not None and self.password is not None:
-            auth['basicAuth'] = {
-                'type': 'basic',
-                'in': 'header',
-                'key': 'Authorization',
-                'value': self.get_basic_auth_token()
-            }
         if self.token:
             auth['tokenAuth'] = {
                 'type': 'token',
@@ -428,7 +405,7 @@ conf = ionoscloud_vm_autoscaling.Configuration(
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 1-SDK.1\n"\
-               "SDK Package Version: 1.0.0-beta.1".\
+               "SDK Package Version: 1.0.0".\
                format(env=sys.platform, pyversion=sys.version)
 
     def get_host_settings(self):
@@ -438,7 +415,7 @@ conf = ionoscloud_vm_autoscaling.Configuration(
         """
         return [
             {
-                'url': "https://api.ionos.com/cloudapi/autoscaling",
+                'url': "https://api.ionos.com/autoscaling",
                 'description': "Production",
             }
         ]

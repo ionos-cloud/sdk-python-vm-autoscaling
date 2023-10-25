@@ -1,6 +1,6 @@
 # GroupPut
 
-The update request for an Auto Scaling group.
+The update request for a VM Auto Scaling Group.
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |

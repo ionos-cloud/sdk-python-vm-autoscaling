@@ -2,7 +2,7 @@
 """
     VM Auto Scaling API
 
-    The VM Auto Scaling Service enables IONOS clients to horizontally scale the number of VM replicas based on configured rules. You can use Auto Scaling to ensure that you have a sufficient number of replicas to handle your application loads at all times.  For this purpose, create an Auto Scaling group that contains the server replicas. The VM Auto Scaling Service ensures that the number of replicas in the group is always within the defined limits. For example, if the number of target replicas is specified, Auto Scaling maintains the specified number of replicas.   When scaling policies are set, Auto Scaling creates or deletes replicas according to the requirements of your applications. For each policy, specified 'scale-in' and 'scale-out' actions are performed when the corresponding thresholds are reached.  # noqa: E501
+    The VM Auto Scaling Service enables IONOS clients to horizontally scale the number of VM replicas based on configured rules. You can use VM Auto Scaling to ensure that you have a sufficient number of replicas to handle your application loads at all times.  For this purpose, create a VM Auto Scaling Group that contains the server replicas. The VM Auto Scaling Service ensures that the number of replicas in the group is always within the defined limits.   When scaling policies are set, VM Auto Scaling creates or deletes replicas according to the requirements of your applications. For each policy, specified 'scale-in' and 'scale-out' actions are performed when the corresponding thresholds are reached.  # noqa: E501
 
     The version of the OpenAPI document: 1-SDK.1
     Contact: support@cloud.ionos.com
@@ -114,7 +114,7 @@ class ApiClient(object):
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'ionos-cloud-sdk-python/1.0.0-beta.1'
+        self.user_agent = 'ionos-cloud-sdk-python/1.0.0'
         self.client_side_validation = configuration.client_side_validation
 
     def __enter__(self):
@@ -810,10 +810,13 @@ class ApiClient(object):
 
             current_time = time.time()
             if timeout and current_time > timeout:
-                raise ApiTimeout(
-                    message='Timed out waiting for request {0}.'.format(resp['requestId']),
-                    request_id=resp['requestId']
-                )
+                if type(resp) == dict and resp.get('requestId'):
+                    raise ApiTimeout(
+                        message='Timed out waiting for request {0}.'.format(resp['requestId']),
+                        request_id=resp['requestId'],
+                    )
+                else:
+                    raise ApiTimeout(message='Timeout reached')
 
             if current_time > next_increase:
                 wait_period *= 2

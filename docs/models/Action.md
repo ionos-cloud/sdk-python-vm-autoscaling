@@ -1,6 +1,6 @@
 # Action
 
-The scaling action associated with an Auto Scaling group.
+The scaling action associated with a VM Auto Scaling Group.
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |

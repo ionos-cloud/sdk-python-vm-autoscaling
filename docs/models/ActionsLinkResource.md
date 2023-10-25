@@ -1,6 +1,6 @@
 # ActionsLinkResource
 
-The scaling actions of the specified Auto Scaling group.
+The scaling actions of the specified VM Auto Scaling Group.
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |

@@ -3,7 +3,7 @@
 """
     VM Auto Scaling API
 
-    The VM Auto Scaling Service enables IONOS clients to horizontally scale the number of VM replicas based on configured rules. You can use Auto Scaling to ensure that you have a sufficient number of replicas to handle your application loads at all times.  For this purpose, create an Auto Scaling group that contains the server replicas. The VM Auto Scaling Service ensures that the number of replicas in the group is always within the defined limits. For example, if the number of target replicas is specified, Auto Scaling maintains the specified number of replicas.   When scaling policies are set, Auto Scaling creates or deletes replicas according to the requirements of your applications. For each policy, specified 'scale-in' and 'scale-out' actions are performed when the corresponding thresholds are reached.  # noqa: E501
+    The VM Auto Scaling Service enables IONOS clients to horizontally scale the number of VM replicas based on configured rules. You can use VM Auto Scaling to ensure that you have a sufficient number of replicas to handle your application loads at all times.  For this purpose, create a VM Auto Scaling Group that contains the server replicas. The VM Auto Scaling Service ensures that the number of replicas in the group is always within the defined limits.   When scaling policies are set, VM Auto Scaling creates or deletes replicas according to the requirements of your applications. For each policy, specified 'scale-in' and 'scale-out' actions are performed when the corresponding thresholds are reached.  # noqa: E501
 
     The version of the OpenAPI document: 1-SDK.1
     Contact: support@cloud.ionos.com
@@ -48,6 +48,8 @@ class ReplicaNic(object):
         'flow_logs': 'list[NicFlowLog]',
 
         'firewall_rules': 'list[NicFirewallRule]',
+
+        'target_group': 'TargetGroup',
     }
 
     attribute_map = {
@@ -65,9 +67,11 @@ class ReplicaNic(object):
         'flow_logs': 'flowLogs',
 
         'firewall_rules': 'firewallRules',
+
+        'target_group': 'targetGroup',
     }
 
-    def __init__(self, lan=None, name=None, dhcp=None, firewall_active=None, firewall_type=None, flow_logs=None, firewall_rules=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, lan=None, name=None, dhcp=None, firewall_active=None, firewall_type=None, flow_logs=None, firewall_rules=None, target_group=None, local_vars_configuration=None):  # noqa: E501
         """ReplicaNic - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -80,6 +84,7 @@ class ReplicaNic(object):
         self._firewall_type = None
         self._flow_logs = None
         self._firewall_rules = None
+        self._target_group = None
         self.discriminator = None
 
         self.lan = lan
@@ -89,6 +94,8 @@ class ReplicaNic(object):
         self.firewall_type = firewall_type
         self.flow_logs = flow_logs
         self.firewall_rules = firewall_rules
+        if target_group is not None:
+            self.target_group = target_group
 
 
     @property
@@ -267,6 +274,27 @@ class ReplicaNic(object):
         """
 
         self._firewall_rules = firewall_rules
+
+    @property
+    def target_group(self):
+        """Gets the target_group of this ReplicaNic.  # noqa: E501
+
+
+        :return: The target_group of this ReplicaNic.  # noqa: E501
+        :rtype: TargetGroup
+        """
+        return self._target_group
+
+    @target_group.setter
+    def target_group(self, target_group):
+        """Sets the target_group of this ReplicaNic.
+
+
+        :param target_group: The target_group of this ReplicaNic.  # noqa: E501
+        :type target_group: TargetGroup
+        """
+
+        self._target_group = target_group
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

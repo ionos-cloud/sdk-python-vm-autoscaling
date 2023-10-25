@@ -1,11 +1,11 @@
 # Table of contents
 
-* [Introduction](../README.md)
+* [Introduction](README.md)
 * [Changelog](CHANGELOG.md)
 
 ## API
 
-* [GroupsApi](api/GroupsApi.md)
+* [AutoScalingGroupsApi](api/AutoScalingGroupsApi.md)
 
 ## Models
 
@@ -19,10 +19,8 @@
 * [ActionsLinkResource](models/ActionsLinkResource.md)
 * [AvailabilityZone](models/AvailabilityZone.md)
 * [BusType](models/BusType.md)
-* [Collection](models/Collection.md)
 * [CpuFamily](models/CpuFamily.md)
 * [DatacenterServer](models/DatacenterServer.md)
-* [Error](models/Error.md)
 * [Error401](models/Error401.md)
 * [Error401Message](models/Error401Message.md)
 * [Error404](models/Error404.md)
@@ -33,7 +31,6 @@
 * [ErrorGroupValidateMessage](models/ErrorGroupValidateMessage.md)
 * [ErrorMessage](models/ErrorMessage.md)
 * [ErrorMessageParse](models/ErrorMessageParse.md)
-* [ErrorReplicaValidateMessage](models/ErrorReplicaValidateMessage.md)
 * [Group](models/Group.md)
 * [GroupCollection](models/GroupCollection.md)
 * [GroupPolicy](models/GroupPolicy.md)
@@ -48,7 +45,6 @@
 * [GroupPutProperties](models/GroupPutProperties.md)
 * [GroupPutPropertiesDatacenter](models/GroupPutPropertiesDatacenter.md)
 * [GroupResource](models/GroupResource.md)
-* [ItemBasic](models/ItemBasic.md)
 * [Metadata](models/Metadata.md)
 * [MetadataBasic](models/MetadataBasic.md)
 * [MetadataState](models/MetadataState.md)
@@ -58,16 +54,13 @@
 * [ParseError](models/ParseError.md)
 * [QueryUnit](models/QueryUnit.md)
 * [ReplicaNic](models/ReplicaNic.md)
-* [ReplicaProperties](models/ReplicaProperties.md)
-* [ReplicaPropertiesGet](models/ReplicaPropertiesGet.md)
 * [ReplicaPropertiesPost](models/ReplicaPropertiesPost.md)
-* [ReplicaVolumeGet](models/ReplicaVolumeGet.md)
 * [ReplicaVolumePost](models/ReplicaVolumePost.md)
-* [Resource](models/Resource.md)
 * [Server](models/Server.md)
 * [ServerCollection](models/ServerCollection.md)
 * [ServerProperties](models/ServerProperties.md)
 * [ServerResource](models/ServerResource.md)
 * [ServersLinkResource](models/ServersLinkResource.md)
+* [TargetGroup](models/TargetGroup.md)
 * [TerminationPolicyType](models/TerminationPolicyType.md)
 * [VolumeHwType](models/VolumeHwType.md)

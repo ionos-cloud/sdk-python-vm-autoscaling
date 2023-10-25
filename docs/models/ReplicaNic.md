@@ -10,5 +10,6 @@
 | **firewall_type** | **str** | The type of firewall rules that will be allowed on the NIC. If not specified, the default INGRESS value is used. | [optional]  |
 | **flow_logs** | [**list[NicFlowLog]**](NicFlowLog.md) | List of all flow logs for the specified NIC. | [optional]  |
 | **firewall_rules** | [**list[NicFirewallRule]**](NicFirewallRule.md) | List of all firewall rules for the specified NIC. | [optional]  |
+| **target_group** | [**TargetGroup**](TargetGroup.md) |  | [optional]  |
 
 

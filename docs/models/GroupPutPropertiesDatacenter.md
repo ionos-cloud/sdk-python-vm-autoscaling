@@ -1,6 +1,6 @@
 # GroupPutPropertiesDatacenter
 
-The VMs for this Auto Scaling group are created in this virtual data center.
+The VMs for this VM Auto Scaling Group are created in this virtual data center.
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |

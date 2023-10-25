@@ -3,7 +3,7 @@
 """
     VM Auto Scaling API
 
-    The VM Auto Scaling Service enables IONOS clients to horizontally scale the number of VM replicas based on configured rules. You can use Auto Scaling to ensure that you have a sufficient number of replicas to handle your application loads at all times.  For this purpose, create an Auto Scaling group that contains the server replicas. The VM Auto Scaling Service ensures that the number of replicas in the group is always within the defined limits. For example, if the number of target replicas is specified, Auto Scaling maintains the specified number of replicas.   When scaling policies are set, Auto Scaling creates or deletes replicas according to the requirements of your applications. For each policy, specified 'scale-in' and 'scale-out' actions are performed when the corresponding thresholds are reached.  # noqa: E501
+    The VM Auto Scaling Service enables IONOS clients to horizontally scale the number of VM replicas based on configured rules. You can use VM Auto Scaling to ensure that you have a sufficient number of replicas to handle your application loads at all times.  For this purpose, create a VM Auto Scaling Group that contains the server replicas. The VM Auto Scaling Service ensures that the number of replicas in the group is always within the defined limits.   When scaling policies are set, VM Auto Scaling creates or deletes replicas according to the requirements of your applications. For each policy, specified 'scale-in' and 'scale-out' actions are performed when the corresponding thresholds are reached.  # noqa: E501
 
     The version of the OpenAPI document: 1-SDK.1
     Contact: support@cloud.ionos.com
@@ -71,7 +71,7 @@ class GroupPolicyScaleOutAction(object):
     def amount(self):
         """Gets the amount of this GroupPolicyScaleOutAction.  # noqa: E501
 
-        'amountType=ABSOLUTE' specifies the absolute number of VMs that are added or removed. The value must be between 1 to 10.   'amountType=PERCENTAGE' specifies the percentage value that is applied to the current 'targetReplicaCount' of the autoscaling group. The value must be between 1 to 200.   At least one VM is always added or removed.   Note that for 'SCALE_IN' operations, volumes are not deleted after the server is deleted.  # noqa: E501
+        'amountType=ABSOLUTE' specifies the absolute number of VMs that are added or removed. The value must be between 1 to 10.   'amountType=PERCENTAGE' specifies the percentage value that is applied to the current number of replicas of the VM Auto Scaling Group. The value must be between 1 to 200.   At least one VM is always added or removed.   Note that for 'SCALE_IN' operations, volumes are not deleted after the server is deleted.  # noqa: E501
 
         :return: The amount of this GroupPolicyScaleOutAction.  # noqa: E501
         :rtype: float
@@ -82,7 +82,7 @@ class GroupPolicyScaleOutAction(object):
     def amount(self, amount):
         """Sets the amount of this GroupPolicyScaleOutAction.
 
-        'amountType=ABSOLUTE' specifies the absolute number of VMs that are added or removed. The value must be between 1 to 10.   'amountType=PERCENTAGE' specifies the percentage value that is applied to the current 'targetReplicaCount' of the autoscaling group. The value must be between 1 to 200.   At least one VM is always added or removed.   Note that for 'SCALE_IN' operations, volumes are not deleted after the server is deleted.  # noqa: E501
+        'amountType=ABSOLUTE' specifies the absolute number of VMs that are added or removed. The value must be between 1 to 10.   'amountType=PERCENTAGE' specifies the percentage value that is applied to the current number of replicas of the VM Auto Scaling Group. The value must be between 1 to 200.   At least one VM is always added or removed.   Note that for 'SCALE_IN' operations, volumes are not deleted after the server is deleted.  # noqa: E501
 
         :param amount: The amount of this GroupPolicyScaleOutAction.  # noqa: E501
         :type amount: float
@@ -119,7 +119,7 @@ class GroupPolicyScaleOutAction(object):
     def cooldown_period(self):
         """Gets the cooldown_period of this GroupPolicyScaleOutAction.  # noqa: E501
 
-        The minimum time that elapses after the start of this scaling action until the following scaling action is started. While a scaling action is in progress, no second action is initiated for the same Auto Scaling group. Instead, the metric is re-evaluated after the current scaling action completes (either successfully or with errors). This is currently validated with a minimum value of 2 minutes and a maximum of 24 hours. The default value is 5 minutes if not specified.  # noqa: E501
+        The minimum time that elapses after the start of this scaling action until the following scaling action is started. While a scaling action is in progress, no second action is initiated for the same VM Auto Scaling Group. Instead, the metric is re-evaluated after the current scaling action completes (either successfully or with errors). This is currently validated with a minimum value of 2 minutes and a maximum of 24 hours. The default value is 5 minutes if not specified.  # noqa: E501
 
         :return: The cooldown_period of this GroupPolicyScaleOutAction.  # noqa: E501
         :rtype: str
@@ -130,7 +130,7 @@ class GroupPolicyScaleOutAction(object):
     def cooldown_period(self, cooldown_period):
         """Sets the cooldown_period of this GroupPolicyScaleOutAction.
 
-        The minimum time that elapses after the start of this scaling action until the following scaling action is started. While a scaling action is in progress, no second action is initiated for the same Auto Scaling group. Instead, the metric is re-evaluated after the current scaling action completes (either successfully or with errors). This is currently validated with a minimum value of 2 minutes and a maximum of 24 hours. The default value is 5 minutes if not specified.  # noqa: E501
+        The minimum time that elapses after the start of this scaling action until the following scaling action is started. While a scaling action is in progress, no second action is initiated for the same VM Auto Scaling Group. Instead, the metric is re-evaluated after the current scaling action completes (either successfully or with errors). This is currently validated with a minimum value of 2 minutes and a maximum of 24 hours. The default value is 5 minutes if not specified.  # noqa: E501
 
         :param cooldown_period: The cooldown_period of this GroupPolicyScaleOutAction.  # noqa: E501
         :type cooldown_period: str
