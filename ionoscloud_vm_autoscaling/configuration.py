@@ -204,7 +204,11 @@ conf = ionoscloud_vm_autoscaling.Configuration(
         self.proxy = os.environ.get('IONOS_HTTP_PROXY')
         """Proxy URL
         """
-        self.proxy_headers = os.environ.get('IONOS_HTTP_PROXY_HEADERS')
+        self.proxy_headers = {}
+        proxy_headers_list = os.environ.get('IONOS_HTTP_PROXY_HEADERS','').splitlines()
+        for header in proxy_headers_list:
+            k,v = header.split(':', 1)
+            self.proxy_headers[k.strip()] = bytes(v.lstrip(), "utf-8").decode("unicode_escape")
         """Proxy headers
         """
         self.safe_chars_for_path_param = '/'
@@ -405,7 +409,7 @@ conf = ionoscloud_vm_autoscaling.Configuration(
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 1-SDK.1\n"\
-               "SDK Package Version: 1.0.0".\
+               "SDK Package Version: 1.0.1".\
                format(env=sys.platform, pyversion=sys.version)
 
     def get_host_settings(self):

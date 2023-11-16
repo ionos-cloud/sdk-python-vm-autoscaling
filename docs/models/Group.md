@@ -9,6 +9,6 @@ A group of virtual servers where the number of replicas can be scaled automatica
 | **href** | **str** | The absolute URL to the resource&#39;s representation. | [optional] [readonly]  |
 | **metadata** | [**Metadata**](Metadata.md) |  | [optional]  |
 | **properties** | [**GroupProperties**](GroupProperties.md) |  |  |
-| **entities** | [**GroupPostEntities**](GroupPostEntities.md) |  | [optional]  |
+| **entities** | [**GroupEntities**](GroupEntities.md) |  | [optional]  |
 
 

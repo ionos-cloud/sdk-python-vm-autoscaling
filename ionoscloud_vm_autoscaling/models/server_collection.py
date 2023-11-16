@@ -41,7 +41,7 @@ class ServerCollection(object):
 
         'href': 'str',
 
-        'items': 'list[ServerResource]',
+        'items': 'list[Server]',
     }
 
     attribute_map = {
@@ -153,7 +153,7 @@ class ServerCollection(object):
 
 
         :return: The items of this ServerCollection.  # noqa: E501
-        :rtype: list[ServerResource]
+        :rtype: list[Server]
         """
         return self._items
 
@@ -163,7 +163,7 @@ class ServerCollection(object):
 
 
         :param items: The items of this ServerCollection.  # noqa: E501
-        :type items: list[ServerResource]
+        :type items: list[Server]
         """
 
         self._items = items

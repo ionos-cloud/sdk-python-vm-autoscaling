@@ -41,7 +41,7 @@ class GroupCollection(object):
 
         'href': 'str',
 
-        'items': 'list[GroupResource]',
+        'items': 'list[Group]',
     }
 
     attribute_map = {
@@ -153,7 +153,7 @@ class GroupCollection(object):
 
 
         :return: The items of this GroupCollection.  # noqa: E501
-        :rtype: list[GroupResource]
+        :rtype: list[Group]
         """
         return self._items
 
@@ -163,7 +163,7 @@ class GroupCollection(object):
 
 
         :param items: The items of this GroupCollection.  # noqa: E501
-        :type items: list[GroupResource]
+        :type items: list[Group]
         """
 
         self._items = items

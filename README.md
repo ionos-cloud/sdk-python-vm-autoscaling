@@ -105,6 +105,14 @@ You can use http proxies by setting the following environment variables:
 - `IONOS_HTTP_PROXY` - proxy URL
 - `IONOS_HTTP_PROXY_HEADERS` - proxy headers
 
+Each line in `IONOS_HTTP_PROXY_HEADERS` represents one header, where the header name and value is separated by a colon. Newline characters within a value need to be escaped. See this example:
+```
+Connection: Keep-Alive
+User-Info: MyID
+User-Group: my long\nheader value
+```
+
+
 ### Changing the base URL
 
 Base URL for the HTTP operation can be changed in the following way:
@@ -182,6 +190,7 @@ All URIs are relative to *https://api.ionos.com/autoscaling*
  - [ErrorMessageParse](docs/models/ErrorMessageParse)
  - [Group](docs/models/Group)
  - [GroupCollection](docs/models/GroupCollection)
+ - [GroupEntities](docs/models/GroupEntities)
  - [GroupPolicy](docs/models/GroupPolicy)
  - [GroupPolicyScaleInAction](docs/models/GroupPolicyScaleInAction)
  - [GroupPolicyScaleOutAction](docs/models/GroupPolicyScaleOutAction)
@@ -208,7 +217,6 @@ All URIs are relative to *https://api.ionos.com/autoscaling*
  - [Server](docs/models/Server)
  - [ServerCollection](docs/models/ServerCollection)
  - [ServerProperties](docs/models/ServerProperties)
- - [ServerResource](docs/models/ServerResource)
  - [ServersLinkResource](docs/models/ServersLinkResource)
  - [TargetGroup](docs/models/TargetGroup)
  - [TerminationPolicyType](docs/models/TerminationPolicyType)

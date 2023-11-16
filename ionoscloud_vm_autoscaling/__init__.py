@@ -13,7 +13,7 @@
 """
 
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 # import apis into sdk package
 from ionoscloud_vm_autoscaling.api.auto_scaling_groups_api import AutoScalingGroupsApi
@@ -54,6 +54,7 @@ from ionoscloud_vm_autoscaling.models.error_message import ErrorMessage
 from ionoscloud_vm_autoscaling.models.error_message_parse import ErrorMessageParse
 from ionoscloud_vm_autoscaling.models.group import Group
 from ionoscloud_vm_autoscaling.models.group_collection import GroupCollection
+from ionoscloud_vm_autoscaling.models.group_entities import GroupEntities
 from ionoscloud_vm_autoscaling.models.group_policy import GroupPolicy
 from ionoscloud_vm_autoscaling.models.group_policy_scale_in_action import GroupPolicyScaleInAction
 from ionoscloud_vm_autoscaling.models.group_policy_scale_out_action import GroupPolicyScaleOutAction
@@ -80,7 +81,6 @@ from ionoscloud_vm_autoscaling.models.replica_volume_post import ReplicaVolumePo
 from ionoscloud_vm_autoscaling.models.server import Server
 from ionoscloud_vm_autoscaling.models.server_collection import ServerCollection
 from ionoscloud_vm_autoscaling.models.server_properties import ServerProperties
-from ionoscloud_vm_autoscaling.models.server_resource import ServerResource
 from ionoscloud_vm_autoscaling.models.servers_link_resource import ServersLinkResource
 from ionoscloud_vm_autoscaling.models.target_group import TargetGroup
 from ionoscloud_vm_autoscaling.models.termination_policy_type import TerminationPolicyType

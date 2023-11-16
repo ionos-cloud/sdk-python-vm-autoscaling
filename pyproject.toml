@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ionoscloud_vm_autoscaling"
-version = "1.0.0"
+version = "1.0.1"
 description = "VM Auto Scaling API"
 authors = ["IONOS Cloud Support <support@cloud.ionos.com>"]
 license = "NoLicense"

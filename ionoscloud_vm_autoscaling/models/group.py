@@ -45,7 +45,7 @@ class Group(object):
 
         'properties': 'GroupProperties',
 
-        'entities': 'GroupPostEntities',
+        'entities': 'GroupEntities',
     }
 
     attribute_map = {
@@ -210,7 +210,7 @@ class Group(object):
 
 
         :return: The entities of this Group.  # noqa: E501
-        :rtype: GroupPostEntities
+        :rtype: GroupEntities
         """
         return self._entities
 
@@ -220,7 +220,7 @@ class Group(object):
 
 
         :param entities: The entities of this Group.  # noqa: E501
-        :type entities: GroupPostEntities
+        :type entities: GroupEntities
         """
 
         self._entities = entities

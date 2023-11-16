@@ -41,7 +41,7 @@ class ActionCollection(object):
 
         'href': 'str',
 
-        'items': 'list[ActionResource]',
+        'items': 'list[Action]',
     }
 
     attribute_map = {
@@ -153,7 +153,7 @@ class ActionCollection(object):
 
 
         :return: The items of this ActionCollection.  # noqa: E501
-        :rtype: list[ActionResource]
+        :rtype: list[Action]
         """
         return self._items
 
@@ -163,7 +163,7 @@ class ActionCollection(object):
 
 
         :param items: The items of this ActionCollection.  # noqa: E501
-        :type items: list[ActionResource]
+        :type items: list[Action]
         """
 
         self._items = items
