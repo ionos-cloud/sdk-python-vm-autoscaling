@@ -4,6 +4,8 @@ The CPU family for the VMs created with this configuration. If the value is 'nul
 
 ## Enum
 
+* `INTEL_SIERRAFOREST` (value: `'INTEL_SIERRAFOREST'`)
+
 * `INTEL_ICELAKE` (value: `'INTEL_ICELAKE'`)
 
 * `AMD_OPTERON` (value: `'AMD_OPTERON'`)

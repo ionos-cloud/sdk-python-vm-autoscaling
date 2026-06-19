@@ -15,7 +15,7 @@
 """  # noqa: E501
 
 
-__version__ = "2.0.0-beta.1"
+__version__ = "2.0.0"
 
 # import apis into sdk package
 from ionoscloud_vm_autoscaling.api.auto_scaling_groups_api import AutoScalingGroupsApi

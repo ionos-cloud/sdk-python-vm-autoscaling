@@ -53,8 +53,8 @@ class AutoScalingGroupsApi:
         self,
         action_id: Optional[StrictStr],
         group_id: Optional[StrictStr],
-        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
-        query_params: Annotated[Optional[List[Tuple[str, str]]], Field(description="Query parameters to be sent on the request.")] = None,
+        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
+        query_params: Annotated[Optional[Union[Dict[str, str], List[Tuple[str, str]]]], Field(description="Query parameters to be sent on the request.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -76,7 +76,7 @@ class AutoScalingGroupsApi:
         :type action_id: str
         :param group_id: (required)
         :type group_id: str
-        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
+        :param depth: With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -134,8 +134,8 @@ class AutoScalingGroupsApi:
         self,
         action_id: Optional[StrictStr],
         group_id: Optional[StrictStr],
-        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
-        query_params: Annotated[Optional[List[Tuple[str, str]]], Field(description="Query parameters to be sent on the request.")] = None,
+        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
+        query_params: Annotated[Optional[Union[Dict[str, str], List[Tuple[str, str]]]], Field(description="Query parameters to be sent on the request.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -157,7 +157,7 @@ class AutoScalingGroupsApi:
         :type action_id: str
         :param group_id: (required)
         :type group_id: str
-        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
+        :param depth: With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -215,8 +215,8 @@ class AutoScalingGroupsApi:
         self,
         action_id: Optional[StrictStr],
         group_id: Optional[StrictStr],
-        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
-        query_params: Annotated[Optional[List[Tuple[str, str]]], Field(description="Query parameters to be sent on the request.")] = None,
+        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
+        query_params: Annotated[Optional[Union[Dict[str, str], List[Tuple[str, str]]]], Field(description="Query parameters to be sent on the request.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -238,7 +238,7 @@ class AutoScalingGroupsApi:
         :type action_id: str
         :param group_id: (required)
         :type group_id: str
-        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
+        :param depth: With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -307,7 +307,10 @@ class AutoScalingGroupsApi:
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
         if query_params is not None:
-            _query_params = query_params
+            if isinstance(query_params, dict):
+                _query_params = list(query_params.items())
+            else:
+                _query_params = list(query_params)
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
         _files: Dict[
@@ -366,9 +369,9 @@ class AutoScalingGroupsApi:
     def groups_actions_get(
         self,
         group_id: Optional[StrictStr],
-        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
+        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Use this parameter to specify by which the returned list should be sorted. Valid values are: ``createdDate`` and ``lastModifiedDate``.")] = None,
-        query_params: Annotated[Optional[List[Tuple[str, str]]], Field(description="Query parameters to be sent on the request.")] = None,
+        query_params: Annotated[Optional[Union[Dict[str, str], List[Tuple[str, str]]]], Field(description="Query parameters to be sent on the request.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -388,7 +391,7 @@ class AutoScalingGroupsApi:
 
         :param group_id: (required)
         :type group_id: str
-        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
+        :param depth: With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
         :param order_by: Use this parameter to specify by which the returned list should be sorted. Valid values are: ``createdDate`` and ``lastModifiedDate``.
         :type order_by: str
@@ -447,9 +450,9 @@ class AutoScalingGroupsApi:
     def groups_actions_get_with_http_info(
         self,
         group_id: Optional[StrictStr],
-        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
+        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Use this parameter to specify by which the returned list should be sorted. Valid values are: ``createdDate`` and ``lastModifiedDate``.")] = None,
-        query_params: Annotated[Optional[List[Tuple[str, str]]], Field(description="Query parameters to be sent on the request.")] = None,
+        query_params: Annotated[Optional[Union[Dict[str, str], List[Tuple[str, str]]]], Field(description="Query parameters to be sent on the request.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -469,7 +472,7 @@ class AutoScalingGroupsApi:
 
         :param group_id: (required)
         :type group_id: str
-        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
+        :param depth: With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
         :param order_by: Use this parameter to specify by which the returned list should be sorted. Valid values are: ``createdDate`` and ``lastModifiedDate``.
         :type order_by: str
@@ -528,9 +531,9 @@ class AutoScalingGroupsApi:
     def groups_actions_get_without_preload_content(
         self,
         group_id: Optional[StrictStr],
-        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
+        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Use this parameter to specify by which the returned list should be sorted. Valid values are: ``createdDate`` and ``lastModifiedDate``.")] = None,
-        query_params: Annotated[Optional[List[Tuple[str, str]]], Field(description="Query parameters to be sent on the request.")] = None,
+        query_params: Annotated[Optional[Union[Dict[str, str], List[Tuple[str, str]]]], Field(description="Query parameters to be sent on the request.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -550,7 +553,7 @@ class AutoScalingGroupsApi:
 
         :param group_id: (required)
         :type group_id: str
-        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
+        :param depth: With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
         :param order_by: Use this parameter to specify by which the returned list should be sorted. Valid values are: ``createdDate`` and ``lastModifiedDate``.
         :type order_by: str
@@ -621,7 +624,10 @@ class AutoScalingGroupsApi:
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
         if query_params is not None:
-            _query_params = query_params
+            if isinstance(query_params, dict):
+                _query_params = list(query_params.items())
+            else:
+                _query_params = list(query_params)
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
         _files: Dict[
@@ -682,7 +688,7 @@ class AutoScalingGroupsApi:
     def groups_delete(
         self,
         group_id: Optional[StrictStr],
-        query_params: Annotated[Optional[List[Tuple[str, str]]], Field(description="Query parameters to be sent on the request.")] = None,
+        query_params: Annotated[Optional[Union[Dict[str, str], List[Tuple[str, str]]]], Field(description="Query parameters to be sent on the request.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -754,7 +760,7 @@ class AutoScalingGroupsApi:
     def groups_delete_with_http_info(
         self,
         group_id: Optional[StrictStr],
-        query_params: Annotated[Optional[List[Tuple[str, str]]], Field(description="Query parameters to be sent on the request.")] = None,
+        query_params: Annotated[Optional[Union[Dict[str, str], List[Tuple[str, str]]]], Field(description="Query parameters to be sent on the request.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -826,7 +832,7 @@ class AutoScalingGroupsApi:
     def groups_delete_without_preload_content(
         self,
         group_id: Optional[StrictStr],
-        query_params: Annotated[Optional[List[Tuple[str, str]]], Field(description="Query parameters to be sent on the request.")] = None,
+        query_params: Annotated[Optional[Union[Dict[str, str], List[Tuple[str, str]]]], Field(description="Query parameters to be sent on the request.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -908,7 +914,10 @@ class AutoScalingGroupsApi:
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
         if query_params is not None:
-            _query_params = query_params
+            if isinstance(query_params, dict):
+                _query_params = list(query_params.items())
+            else:
+                _query_params = list(query_params)
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
         _files: Dict[
@@ -961,8 +970,8 @@ class AutoScalingGroupsApi:
     def groups_find_by_id(
         self,
         group_id: Optional[StrictStr],
-        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
-        query_params: Annotated[Optional[List[Tuple[str, str]]], Field(description="Query parameters to be sent on the request.")] = None,
+        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
+        query_params: Annotated[Optional[Union[Dict[str, str], List[Tuple[str, str]]]], Field(description="Query parameters to be sent on the request.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -982,7 +991,7 @@ class AutoScalingGroupsApi:
 
         :param group_id: (required)
         :type group_id: str
-        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
+        :param depth: With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1038,8 +1047,8 @@ class AutoScalingGroupsApi:
     def groups_find_by_id_with_http_info(
         self,
         group_id: Optional[StrictStr],
-        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
-        query_params: Annotated[Optional[List[Tuple[str, str]]], Field(description="Query parameters to be sent on the request.")] = None,
+        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
+        query_params: Annotated[Optional[Union[Dict[str, str], List[Tuple[str, str]]]], Field(description="Query parameters to be sent on the request.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1059,7 +1068,7 @@ class AutoScalingGroupsApi:
 
         :param group_id: (required)
         :type group_id: str
-        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
+        :param depth: With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1115,8 +1124,8 @@ class AutoScalingGroupsApi:
     def groups_find_by_id_without_preload_content(
         self,
         group_id: Optional[StrictStr],
-        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
-        query_params: Annotated[Optional[List[Tuple[str, str]]], Field(description="Query parameters to be sent on the request.")] = None,
+        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
+        query_params: Annotated[Optional[Union[Dict[str, str], List[Tuple[str, str]]]], Field(description="Query parameters to be sent on the request.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1136,7 +1145,7 @@ class AutoScalingGroupsApi:
 
         :param group_id: (required)
         :type group_id: str
-        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
+        :param depth: With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1203,7 +1212,10 @@ class AutoScalingGroupsApi:
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
         if query_params is not None:
-            _query_params = query_params
+            if isinstance(query_params, dict):
+                _query_params = list(query_params.items())
+            else:
+                _query_params = list(query_params)
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
         _files: Dict[
@@ -1259,9 +1271,9 @@ class AutoScalingGroupsApi:
     @validate_call
     def groups_get(
         self,
-        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
+        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Use this parameter to specify by which the returned list should be sorted. Valid values are: ``createdDate`` and ``lastModifiedDate``.")] = None,
-        query_params: Annotated[Optional[List[Tuple[str, str]]], Field(description="Query parameters to be sent on the request.")] = None,
+        query_params: Annotated[Optional[Union[Dict[str, str], List[Tuple[str, str]]]], Field(description="Query parameters to be sent on the request.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1279,7 +1291,7 @@ class AutoScalingGroupsApi:
 
         Lists all VM Auto Scaling Groups of your account.
 
-        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
+        :param depth: With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
         :param order_by: Use this parameter to specify by which the returned list should be sorted. Valid values are: ``createdDate`` and ``lastModifiedDate``.
         :type order_by: str
@@ -1336,9 +1348,9 @@ class AutoScalingGroupsApi:
     @validate_call
     def groups_get_with_http_info(
         self,
-        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
+        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Use this parameter to specify by which the returned list should be sorted. Valid values are: ``createdDate`` and ``lastModifiedDate``.")] = None,
-        query_params: Annotated[Optional[List[Tuple[str, str]]], Field(description="Query parameters to be sent on the request.")] = None,
+        query_params: Annotated[Optional[Union[Dict[str, str], List[Tuple[str, str]]]], Field(description="Query parameters to be sent on the request.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1356,7 +1368,7 @@ class AutoScalingGroupsApi:
 
         Lists all VM Auto Scaling Groups of your account.
 
-        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
+        :param depth: With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
         :param order_by: Use this parameter to specify by which the returned list should be sorted. Valid values are: ``createdDate`` and ``lastModifiedDate``.
         :type order_by: str
@@ -1413,9 +1425,9 @@ class AutoScalingGroupsApi:
     @validate_call
     def groups_get_without_preload_content(
         self,
-        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
+        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Use this parameter to specify by which the returned list should be sorted. Valid values are: ``createdDate`` and ``lastModifiedDate``.")] = None,
-        query_params: Annotated[Optional[List[Tuple[str, str]]], Field(description="Query parameters to be sent on the request.")] = None,
+        query_params: Annotated[Optional[Union[Dict[str, str], List[Tuple[str, str]]]], Field(description="Query parameters to be sent on the request.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1433,7 +1445,7 @@ class AutoScalingGroupsApi:
 
         Lists all VM Auto Scaling Groups of your account.
 
-        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
+        :param depth: With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
         :param order_by: Use this parameter to specify by which the returned list should be sorted. Valid values are: ``createdDate`` and ``lastModifiedDate``.
         :type order_by: str
@@ -1502,7 +1514,10 @@ class AutoScalingGroupsApi:
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
         if query_params is not None:
-            _query_params = query_params
+            if isinstance(query_params, dict):
+                _query_params = list(query_params.items())
+            else:
+                _query_params = list(query_params)
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
         _files: Dict[
@@ -1561,7 +1576,7 @@ class AutoScalingGroupsApi:
     def groups_post(
         self,
         group_post: Optional[GroupPost],
-        query_params: Annotated[Optional[List[Tuple[str, str]]], Field(description="Query parameters to be sent on the request.")] = None,
+        query_params: Annotated[Optional[Union[Dict[str, str], List[Tuple[str, str]]]], Field(description="Query parameters to be sent on the request.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1635,7 +1650,7 @@ class AutoScalingGroupsApi:
     def groups_post_with_http_info(
         self,
         group_post: Optional[GroupPost],
-        query_params: Annotated[Optional[List[Tuple[str, str]]], Field(description="Query parameters to be sent on the request.")] = None,
+        query_params: Annotated[Optional[Union[Dict[str, str], List[Tuple[str, str]]]], Field(description="Query parameters to be sent on the request.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1709,7 +1724,7 @@ class AutoScalingGroupsApi:
     def groups_post_without_preload_content(
         self,
         group_post: Optional[GroupPost],
-        query_params: Annotated[Optional[List[Tuple[str, str]]], Field(description="Query parameters to be sent on the request.")] = None,
+        query_params: Annotated[Optional[Union[Dict[str, str], List[Tuple[str, str]]]], Field(description="Query parameters to be sent on the request.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1793,7 +1808,10 @@ class AutoScalingGroupsApi:
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
         if query_params is not None:
-            _query_params = query_params
+            if isinstance(query_params, dict):
+                _query_params = list(query_params.items())
+            else:
+                _query_params = list(query_params)
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
         _files: Dict[
@@ -1860,7 +1878,7 @@ class AutoScalingGroupsApi:
         self,
         group_id: Optional[StrictStr],
         group_put: Optional[GroupPut],
-        query_params: Annotated[Optional[List[Tuple[str, str]]], Field(description="Query parameters to be sent on the request.")] = None,
+        query_params: Annotated[Optional[Union[Dict[str, str], List[Tuple[str, str]]]], Field(description="Query parameters to be sent on the request.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1937,7 +1955,7 @@ class AutoScalingGroupsApi:
         self,
         group_id: Optional[StrictStr],
         group_put: Optional[GroupPut],
-        query_params: Annotated[Optional[List[Tuple[str, str]]], Field(description="Query parameters to be sent on the request.")] = None,
+        query_params: Annotated[Optional[Union[Dict[str, str], List[Tuple[str, str]]]], Field(description="Query parameters to be sent on the request.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2014,7 +2032,7 @@ class AutoScalingGroupsApi:
         self,
         group_id: Optional[StrictStr],
         group_put: Optional[GroupPut],
-        query_params: Annotated[Optional[List[Tuple[str, str]]], Field(description="Query parameters to be sent on the request.")] = None,
+        query_params: Annotated[Optional[Union[Dict[str, str], List[Tuple[str, str]]]], Field(description="Query parameters to be sent on the request.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2101,7 +2119,10 @@ class AutoScalingGroupsApi:
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
         if query_params is not None:
-            _query_params = query_params
+            if isinstance(query_params, dict):
+                _query_params = list(query_params.items())
+            else:
+                _query_params = list(query_params)
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
         _files: Dict[
@@ -2170,8 +2191,8 @@ class AutoScalingGroupsApi:
         self,
         group_id: Optional[StrictStr],
         server_id: Optional[StrictStr],
-        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
-        query_params: Annotated[Optional[List[Tuple[str, str]]], Field(description="Query parameters to be sent on the request.")] = None,
+        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
+        query_params: Annotated[Optional[Union[Dict[str, str], List[Tuple[str, str]]]], Field(description="Query parameters to be sent on the request.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2193,7 +2214,7 @@ class AutoScalingGroupsApi:
         :type group_id: str
         :param server_id: (required)
         :type server_id: str
-        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
+        :param depth: With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2251,8 +2272,8 @@ class AutoScalingGroupsApi:
         self,
         group_id: Optional[StrictStr],
         server_id: Optional[StrictStr],
-        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
-        query_params: Annotated[Optional[List[Tuple[str, str]]], Field(description="Query parameters to be sent on the request.")] = None,
+        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
+        query_params: Annotated[Optional[Union[Dict[str, str], List[Tuple[str, str]]]], Field(description="Query parameters to be sent on the request.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2274,7 +2295,7 @@ class AutoScalingGroupsApi:
         :type group_id: str
         :param server_id: (required)
         :type server_id: str
-        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
+        :param depth: With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2332,8 +2353,8 @@ class AutoScalingGroupsApi:
         self,
         group_id: Optional[StrictStr],
         server_id: Optional[StrictStr],
-        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
-        query_params: Annotated[Optional[List[Tuple[str, str]]], Field(description="Query parameters to be sent on the request.")] = None,
+        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
+        query_params: Annotated[Optional[Union[Dict[str, str], List[Tuple[str, str]]]], Field(description="Query parameters to be sent on the request.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2355,7 +2376,7 @@ class AutoScalingGroupsApi:
         :type group_id: str
         :param server_id: (required)
         :type server_id: str
-        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
+        :param depth: With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2424,7 +2445,10 @@ class AutoScalingGroupsApi:
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
         if query_params is not None:
-            _query_params = query_params
+            if isinstance(query_params, dict):
+                _query_params = list(query_params.items())
+            else:
+                _query_params = list(query_params)
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
         _files: Dict[
@@ -2483,9 +2507,9 @@ class AutoScalingGroupsApi:
     def groups_servers_get(
         self,
         group_id: Optional[StrictStr],
-        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
+        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Use this parameter to specify by which the returned list should be sorted. Valid values are: ``createdDate`` and ``lastModifiedDate``.")] = None,
-        query_params: Annotated[Optional[List[Tuple[str, str]]], Field(description="Query parameters to be sent on the request.")] = None,
+        query_params: Annotated[Optional[Union[Dict[str, str], List[Tuple[str, str]]]], Field(description="Query parameters to be sent on the request.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2505,7 +2529,7 @@ class AutoScalingGroupsApi:
 
         :param group_id: (required)
         :type group_id: str
-        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
+        :param depth: With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
         :param order_by: Use this parameter to specify by which the returned list should be sorted. Valid values are: ``createdDate`` and ``lastModifiedDate``.
         :type order_by: str
@@ -2564,9 +2588,9 @@ class AutoScalingGroupsApi:
     def groups_servers_get_with_http_info(
         self,
         group_id: Optional[StrictStr],
-        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
+        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Use this parameter to specify by which the returned list should be sorted. Valid values are: ``createdDate`` and ``lastModifiedDate``.")] = None,
-        query_params: Annotated[Optional[List[Tuple[str, str]]], Field(description="Query parameters to be sent on the request.")] = None,
+        query_params: Annotated[Optional[Union[Dict[str, str], List[Tuple[str, str]]]], Field(description="Query parameters to be sent on the request.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2586,7 +2610,7 @@ class AutoScalingGroupsApi:
 
         :param group_id: (required)
         :type group_id: str
-        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
+        :param depth: With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
         :param order_by: Use this parameter to specify by which the returned list should be sorted. Valid values are: ``createdDate`` and ``lastModifiedDate``.
         :type order_by: str
@@ -2645,9 +2669,9 @@ class AutoScalingGroupsApi:
     def groups_servers_get_without_preload_content(
         self,
         group_id: Optional[StrictStr],
-        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
+        depth: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  ")] = None,
         order_by: Annotated[Optional[StrictStr], Field(description="Use this parameter to specify by which the returned list should be sorted. Valid values are: ``createdDate`` and ``lastModifiedDate``.")] = None,
-        query_params: Annotated[Optional[List[Tuple[str, str]]], Field(description="Query parameters to be sent on the request.")] = None,
+        query_params: Annotated[Optional[Union[Dict[str, str], List[Tuple[str, str]]]], Field(description="Query parameters to be sent on the request.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2667,7 +2691,7 @@ class AutoScalingGroupsApi:
 
         :param group_id: (required)
         :type group_id: str
-        :param depth: With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
+        :param depth: With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.  
         :type depth: float
         :param order_by: Use this parameter to specify by which the returned list should be sorted. Valid values are: ``createdDate`` and ``lastModifiedDate``.
         :type order_by: str
@@ -2738,7 +2762,10 @@ class AutoScalingGroupsApi:
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
         if query_params is not None:
-            _query_params = query_params
+            if isinstance(query_params, dict):
+                _query_params = list(query_params.items())
+            else:
+                _query_params = list(query_params)
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
         _files: Dict[

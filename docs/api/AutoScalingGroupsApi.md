@@ -55,7 +55,7 @@ with ionoscloud_vm_autoscaling.ApiClient(configuration) as api_client:
     api_instance = ionoscloud_vm_autoscaling.AutoScalingGroupsApi(api_client)
     action_id = 'action_id_example' # str | 
     group_id = 'group_id_example' # str | 
-    depth = 0 # float | With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.   (optional) (default to 0)
+    depth = 0 # float | With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.   (optional) (default to 0)
 
     try:
         # Get Scaling Action Details by ID
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **action_id** | **str**|  | 
  **group_id** | **str**|  | 
- **depth** | **float**| With this parameter, you control the level of detail of the response objects:    - &#x60;&#x60;0&#x60;&#x60;: Only direct properties are included; children (such as executions or transitions) are not considered.    - &#x60;&#x60;1&#x60;&#x60;: Direct properties and children references are included.    - &#x60;&#x60;2&#x60;&#x60;: Direct properties and children properties are included.    - &#x60;&#x60;3&#x60;&#x60;: Direct properties and children properties and children&#39;s children are included.    - etc.   | [optional] [default to 0]
+ **depth** | **float**| With this parameter, you control the level of detail of the response objects:     - &#x60;&#x60;0&#x60;&#x60;: Only direct properties are included; children (such as executions or transitions) are not considered.    - &#x60;&#x60;1&#x60;&#x60;: Direct properties and children references are included.    - &#x60;&#x60;2&#x60;&#x60;: Direct properties and children properties are included.    - &#x60;&#x60;3&#x60;&#x60;: Direct properties and children properties and children&#39;s children are included.    - etc.   | [optional] [default to 0]
 
 ### Return type
 
@@ -140,7 +140,7 @@ with ionoscloud_vm_autoscaling.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud_vm_autoscaling.AutoScalingGroupsApi(api_client)
     group_id = 'group_id_example' # str | 
-    depth = 0 # float | With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.   (optional) (default to 0)
+    depth = 0 # float | With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.   (optional) (default to 0)
     order_by = 'createdDate' # str | Use this parameter to specify by which the returned list should be sorted. Valid values are: ``createdDate`` and ``lastModifiedDate``. (optional) (default to 'createdDate')
 
     try:
@@ -160,7 +160,7 @@ with ionoscloud_vm_autoscaling.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **group_id** | **str**|  | 
- **depth** | **float**| With this parameter, you control the level of detail of the response objects:    - &#x60;&#x60;0&#x60;&#x60;: Only direct properties are included; children (such as executions or transitions) are not considered.    - &#x60;&#x60;1&#x60;&#x60;: Direct properties and children references are included.    - &#x60;&#x60;2&#x60;&#x60;: Direct properties and children properties are included.    - &#x60;&#x60;3&#x60;&#x60;: Direct properties and children properties and children&#39;s children are included.    - etc.   | [optional] [default to 0]
+ **depth** | **float**| With this parameter, you control the level of detail of the response objects:     - &#x60;&#x60;0&#x60;&#x60;: Only direct properties are included; children (such as executions or transitions) are not considered.    - &#x60;&#x60;1&#x60;&#x60;: Direct properties and children references are included.    - &#x60;&#x60;2&#x60;&#x60;: Direct properties and children properties are included.    - &#x60;&#x60;3&#x60;&#x60;: Direct properties and children properties and children&#39;s children are included.    - etc.   | [optional] [default to 0]
  **order_by** | **str**| Use this parameter to specify by which the returned list should be sorted. Valid values are: &#x60;&#x60;createdDate&#x60;&#x60; and &#x60;&#x60;lastModifiedDate&#x60;&#x60;. | [optional] [default to &#39;createdDate&#39;]
 
 ### Return type
@@ -307,7 +307,7 @@ with ionoscloud_vm_autoscaling.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud_vm_autoscaling.AutoScalingGroupsApi(api_client)
     group_id = 'group_id_example' # str | 
-    depth = 0 # float | With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.   (optional) (default to 0)
+    depth = 0 # float | With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.   (optional) (default to 0)
 
     try:
         # Get an Auto Scaling by ID
@@ -326,7 +326,7 @@ with ionoscloud_vm_autoscaling.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **group_id** | **str**|  | 
- **depth** | **float**| With this parameter, you control the level of detail of the response objects:    - &#x60;&#x60;0&#x60;&#x60;: Only direct properties are included; children (such as executions or transitions) are not considered.    - &#x60;&#x60;1&#x60;&#x60;: Direct properties and children references are included.    - &#x60;&#x60;2&#x60;&#x60;: Direct properties and children properties are included.    - &#x60;&#x60;3&#x60;&#x60;: Direct properties and children properties and children&#39;s children are included.    - etc.   | [optional] [default to 0]
+ **depth** | **float**| With this parameter, you control the level of detail of the response objects:     - &#x60;&#x60;0&#x60;&#x60;: Only direct properties are included; children (such as executions or transitions) are not considered.    - &#x60;&#x60;1&#x60;&#x60;: Direct properties and children references are included.    - &#x60;&#x60;2&#x60;&#x60;: Direct properties and children properties are included.    - &#x60;&#x60;3&#x60;&#x60;: Direct properties and children properties and children&#39;s children are included.    - etc.   | [optional] [default to 0]
 
 ### Return type
 
@@ -390,7 +390,7 @@ configuration.api_key['tokenAuth'] = os.environ["API_KEY"]
 with ionoscloud_vm_autoscaling.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud_vm_autoscaling.AutoScalingGroupsApi(api_client)
-    depth = 0 # float | With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.   (optional) (default to 0)
+    depth = 0 # float | With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.   (optional) (default to 0)
     order_by = 'createdDate' # str | Use this parameter to specify by which the returned list should be sorted. Valid values are: ``createdDate`` and ``lastModifiedDate``. (optional) (default to 'createdDate')
 
     try:
@@ -409,7 +409,7 @@ with ionoscloud_vm_autoscaling.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **depth** | **float**| With this parameter, you control the level of detail of the response objects:    - &#x60;&#x60;0&#x60;&#x60;: Only direct properties are included; children (such as executions or transitions) are not considered.    - &#x60;&#x60;1&#x60;&#x60;: Direct properties and children references are included.    - &#x60;&#x60;2&#x60;&#x60;: Direct properties and children properties are included.    - &#x60;&#x60;3&#x60;&#x60;: Direct properties and children properties and children&#39;s children are included.    - etc.   | [optional] [default to 0]
+ **depth** | **float**| With this parameter, you control the level of detail of the response objects:     - &#x60;&#x60;0&#x60;&#x60;: Only direct properties are included; children (such as executions or transitions) are not considered.    - &#x60;&#x60;1&#x60;&#x60;: Direct properties and children references are included.    - &#x60;&#x60;2&#x60;&#x60;: Direct properties and children properties are included.    - &#x60;&#x60;3&#x60;&#x60;: Direct properties and children properties and children&#39;s children are included.    - etc.   | [optional] [default to 0]
  **order_by** | **str**| Use this parameter to specify by which the returned list should be sorted. Valid values are: &#x60;&#x60;createdDate&#x60;&#x60; and &#x60;&#x60;lastModifiedDate&#x60;&#x60;. | [optional] [default to &#39;createdDate&#39;]
 
 ### Return type
@@ -649,7 +649,7 @@ with ionoscloud_vm_autoscaling.ApiClient(configuration) as api_client:
     api_instance = ionoscloud_vm_autoscaling.AutoScalingGroupsApi(api_client)
     group_id = 'group_id_example' # str | 
     server_id = 'server_id_example' # str | 
-    depth = 0 # float | With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.   (optional) (default to 0)
+    depth = 0 # float | With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.   (optional) (default to 0)
 
     try:
         # Get VM Auto Scaling Group Server by ID
@@ -669,7 +669,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **group_id** | **str**|  | 
  **server_id** | **str**|  | 
- **depth** | **float**| With this parameter, you control the level of detail of the response objects:    - &#x60;&#x60;0&#x60;&#x60;: Only direct properties are included; children (such as executions or transitions) are not considered.    - &#x60;&#x60;1&#x60;&#x60;: Direct properties and children references are included.    - &#x60;&#x60;2&#x60;&#x60;: Direct properties and children properties are included.    - &#x60;&#x60;3&#x60;&#x60;: Direct properties and children properties and children&#39;s children are included.    - etc.   | [optional] [default to 0]
+ **depth** | **float**| With this parameter, you control the level of detail of the response objects:     - &#x60;&#x60;0&#x60;&#x60;: Only direct properties are included; children (such as executions or transitions) are not considered.    - &#x60;&#x60;1&#x60;&#x60;: Direct properties and children references are included.    - &#x60;&#x60;2&#x60;&#x60;: Direct properties and children properties are included.    - &#x60;&#x60;3&#x60;&#x60;: Direct properties and children properties and children&#39;s children are included.    - etc.   | [optional] [default to 0]
 
 ### Return type
 
@@ -736,7 +736,7 @@ with ionoscloud_vm_autoscaling.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud_vm_autoscaling.AutoScalingGroupsApi(api_client)
     group_id = 'group_id_example' # str | 
-    depth = 0 # float | With this parameter, you control the level of detail of the response objects:    - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.   (optional) (default to 0)
+    depth = 0 # float | With this parameter, you control the level of detail of the response objects:     - ``0``: Only direct properties are included; children (such as executions or transitions) are not considered.    - ``1``: Direct properties and children references are included.    - ``2``: Direct properties and children properties are included.    - ``3``: Direct properties and children properties and children's children are included.    - etc.   (optional) (default to 0)
     order_by = 'createdDate' # str | Use this parameter to specify by which the returned list should be sorted. Valid values are: ``createdDate`` and ``lastModifiedDate``. (optional) (default to 'createdDate')
 
     try:
@@ -756,7 +756,7 @@ with ionoscloud_vm_autoscaling.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **group_id** | **str**|  | 
- **depth** | **float**| With this parameter, you control the level of detail of the response objects:    - &#x60;&#x60;0&#x60;&#x60;: Only direct properties are included; children (such as executions or transitions) are not considered.    - &#x60;&#x60;1&#x60;&#x60;: Direct properties and children references are included.    - &#x60;&#x60;2&#x60;&#x60;: Direct properties and children properties are included.    - &#x60;&#x60;3&#x60;&#x60;: Direct properties and children properties and children&#39;s children are included.    - etc.   | [optional] [default to 0]
+ **depth** | **float**| With this parameter, you control the level of detail of the response objects:     - &#x60;&#x60;0&#x60;&#x60;: Only direct properties are included; children (such as executions or transitions) are not considered.    - &#x60;&#x60;1&#x60;&#x60;: Direct properties and children references are included.    - &#x60;&#x60;2&#x60;&#x60;: Direct properties and children properties are included.    - &#x60;&#x60;3&#x60;&#x60;: Direct properties and children properties and children&#39;s children are included.    - etc.   | [optional] [default to 0]
  **order_by** | **str**| Use this parameter to specify by which the returned list should be sorted. Valid values are: &#x60;&#x60;createdDate&#x60;&#x60; and &#x60;&#x60;lastModifiedDate&#x60;&#x60;. | [optional] [default to &#39;createdDate&#39;]
 
 ### Return type

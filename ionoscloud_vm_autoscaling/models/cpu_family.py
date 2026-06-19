@@ -27,6 +27,7 @@ class CpuFamily(str, Enum):
     """
     allowed enum values
     """
+    INTEL_SIERRAFOREST = 'INTEL_SIERRAFOREST'
     INTEL_ICELAKE = 'INTEL_ICELAKE'
     AMD_OPTERON = 'AMD_OPTERON'
     INTEL_SKYLAKE = 'INTEL_SKYLAKE'
